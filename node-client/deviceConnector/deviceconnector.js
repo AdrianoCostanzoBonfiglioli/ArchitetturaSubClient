@@ -4,41 +4,23 @@ var array = [];
 
 var DeviceConnector = function (config) 
 {
-
-    console.log("connector start");
-
-        // solo per cancellare il file
-        const fs = require('fs');
-        fs.writeFile('ReadyToPutIntoTheCloud.txt', "Start new Reqeust istance... \n", (err) => {  
-            if (err) throw err;
-            console.log('New File Create');
-        });
-
     globalconfig = config; // set new global config
 
-    console.log(globalconfig.deviceinfo.protocol.name);
     InstanceSelect(globalconfig.deviceinfo.protocol.name);
 }
 
 
 var SoapDeviceConnector = function (config)
 {
-    /*
-        "wsdl": "http://10.1.154.14:10080/wsdl/smartcheck_status_201601.wsdl",
-        "endpoint": "http://10.1.154.14:10080/smcstatus"
-
-        C è un port forwarding sulla macchina 10.1.154.14
-        CMD WIN-> netsh interface portproxy add v4tov4 listenport=10080 listenaddress=0.0.0.0 connectport=80 connectaddress=10.1.71.100 
-    */
     console.log("Start SOAP connector");
 
-    var wsdl = globalconfig.deviceinfo.protocol.wsdl; //get wsdl file
+    var wsdl = globalconfig.deviceinfo.protocol.wsdl;
     var user = globalconfig.deviceinfo.protocol.user;
     var password = globalconfig.deviceinfo.protocol.password;
     var endpoint = globalconfig.deviceinfo.protocol.endpoint; 
 
-    var request = {'smc:UserId': user, 'smc:Password': password}; //set service input parameters following the documentation (just user and pwd in this case)
-    var options = {envelopeKey: 'soapenv', forceSoap12Headers: true}; //override some properties to have the request working on FAG
+    var request = {'smc:UserId': user, 'smc:Password': password}; 
+    var options = {envelopeKey: 'soapenv', forceSoap12Headers: true}; 
 
     TaskClientCreate(request, wsdl, options, endpoint);
 }
@@ -133,23 +115,14 @@ var CreateJSON = function (ParamConfig, Index, Pkt)
         unit: ParamConfig.unit,
         timestamp: Timestamp,
         value: Value,
-        timerequest: Time,
+        timerequest: Time, // opz
     }
     
     SendJSONData(data);
-
-    // DBG
-    let datafile = JSON.stringify(data, null, 2);
-
-    const fs = require('fs');
-    fs.appendFile('ReadyToPutIntoTheCloud.txt', datafile, (err) => {  
-        if (err) throw err;
-        console.log('Data written to file');
-    });  
 }
 
 
-var SendJSONData = function (data, ) 
+var SendJSONData = function (data) 
 {
     var WebSocket = require('ws');
     var ws = new WebSocket("ws://localhost:1111");
@@ -174,16 +147,7 @@ var InstanceSelect = function (protocolname)
     {
         case "SOAP":
             SoapDeviceConnector(globalconfig);
-
             break;
-        case "Orange":
-            text = "I am not a fan of orange.";
-            break;
-        case "Apple":
-            text = "How you like them apples?";
-            break;
-        default:
-            text = "I have never heard of that fruit...";
     }
 } 
 
@@ -195,22 +159,10 @@ var CreateIndexElements = function (result)
     {   
         for (let i = 0; i < result.MeasurementJobStatus[j].CharacteristicValueStatus.length; i++)
         {
-            
-            //console.log(result.MeasurementJobStatus[j].CharacteristicValueStatus[i]); //DBG momentaneo
-
             var BaseId = result.MeasurementJobStatus[j].CharacteristicValueStatus[i].BaseId;
             array.push({BaseId: BaseId, j: j, i: i});
-
-            //DBG
-            //console.log(BaseId);
-            //console.log("-----");
         }
     }
-
-    //debug
-    //for (var i = 0; i < array.length; i++) 
-        //console.log(array[i]);
-
 }
 
 var Approx = function (num, value) 
