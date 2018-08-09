@@ -1,0 +1,2914 @@
+Start new Reqeust istance... 
+{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Wellhausen counter - Acceleration (Anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0001",
+  "timerequest": 1533808240559
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Peak2peak - Acceleration (High vibration values)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0186",
+  "timerequest": 1533808240581
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Acceleration (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0014",
+  "timerequest": 1533808240581
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Demodulation (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0006",
+  "timerequest": 1533808240581
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Demodulation (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0049",
+  "timerequest": 1533808240582
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "ISO10816-1 (10Hz - 1kHz) - Velocity",
+  "unit": "mm/s",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0319",
+  "timerequest": 1533808240582
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Temperature",
+  "unit": "°C",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "37.00",
+  "timerequest": 1533808240582
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Acceleration (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0000",
+  "timerequest": 1533808240582
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Crest factor - Acceleration (Impulses)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "6.6333",
+  "timerequest": 1533808240583
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Pulley - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0202",
+  "timerequest": 1533808240583
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Acceleration",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0006",
+  "timerequest": 1533808240583
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Demodulation",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0004",
+  "timerequest": 1533808240583
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Sheave - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0432",
+  "timerequest": 1533808240583
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Wellhausen counter - Acceleration (Anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0001",
+  "timerequest": 1533808300551
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Wellhausen counter - Acceleration (Anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0001",
+  "timerequest": 1533808300551
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Peak2peak - Acceleration (High vibration values)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0186",
+  "timerequest": 1533808300551
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Peak2peak - Acceleration (High vibration values)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0186",
+  "timerequest": 1533808300551
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Acceleration (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0014",
+  "timerequest": 1533808300551
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Acceleration (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0014",
+  "timerequest": 1533808300552
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Demodulation (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0006",
+  "timerequest": 1533808300552
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Demodulation (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0006",
+  "timerequest": 1533808300552
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Demodulation (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0049",
+  "timerequest": 1533808300552
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Demodulation (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0049",
+  "timerequest": 1533808300552
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "ISO10816-1 (10Hz - 1kHz) - Velocity",
+  "unit": "mm/s",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0319",
+  "timerequest": 1533808300553
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "ISO10816-1 (10Hz - 1kHz) - Velocity",
+  "unit": "mm/s",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0319",
+  "timerequest": 1533808300553
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Temperature",
+  "unit": "°C",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "37.00",
+  "timerequest": 1533808300553
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Temperature",
+  "unit": "°C",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "37.00",
+  "timerequest": 1533808300553
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Acceleration (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0000",
+  "timerequest": 1533808300553
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Acceleration (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0000",
+  "timerequest": 1533808300554
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Crest factor - Acceleration (Impulses)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "6.6333",
+  "timerequest": 1533808300554
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Crest factor - Acceleration (Impulses)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "6.6333",
+  "timerequest": 1533808300554
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Pulley - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0202",
+  "timerequest": 1533808300554
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Pulley - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0202",
+  "timerequest": 1533808300554
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Acceleration",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0006",
+  "timerequest": 1533808300555
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Acceleration",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0006",
+  "timerequest": 1533808300555
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Demodulation",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0004",
+  "timerequest": 1533808300555
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Demodulation",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0004",
+  "timerequest": 1533808300555
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Sheave - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0432",
+  "timerequest": 1533808300555
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Sheave - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0432",
+  "timerequest": 1533808300556
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Wellhausen counter - Acceleration (Anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0001",
+  "timerequest": 1533808360572
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Wellhausen counter - Acceleration (Anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0001",
+  "timerequest": 1533808360573
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Wellhausen counter - Acceleration (Anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0001",
+  "timerequest": 1533808360573
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Peak2peak - Acceleration (High vibration values)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0186",
+  "timerequest": 1533808360573
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Peak2peak - Acceleration (High vibration values)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0186",
+  "timerequest": 1533808360573
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Peak2peak - Acceleration (High vibration values)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0186",
+  "timerequest": 1533808360573
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Acceleration (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0014",
+  "timerequest": 1533808360573
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Acceleration (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0014",
+  "timerequest": 1533808360574
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Acceleration (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0014",
+  "timerequest": 1533808360574
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Demodulation (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0006",
+  "timerequest": 1533808360574
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Demodulation (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0006",
+  "timerequest": 1533808360574
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Demodulation (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0006",
+  "timerequest": 1533808360574
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Demodulation (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0049",
+  "timerequest": 1533808360575
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Demodulation (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0049",
+  "timerequest": 1533808360575
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Demodulation (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0049",
+  "timerequest": 1533808360575
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "ISO10816-1 (10Hz - 1kHz) - Velocity",
+  "unit": "mm/s",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0319",
+  "timerequest": 1533808360575
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "ISO10816-1 (10Hz - 1kHz) - Velocity",
+  "unit": "mm/s",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0319",
+  "timerequest": 1533808360575
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "ISO10816-1 (10Hz - 1kHz) - Velocity",
+  "unit": "mm/s",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0319",
+  "timerequest": 1533808360575
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Temperature",
+  "unit": "°C",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "37.00",
+  "timerequest": 1533808360576
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Temperature",
+  "unit": "°C",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "37.00",
+  "timerequest": 1533808360576
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Temperature",
+  "unit": "°C",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "37.00",
+  "timerequest": 1533808360576
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Acceleration (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0000",
+  "timerequest": 1533808360576
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Acceleration (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0000",
+  "timerequest": 1533808360576
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Acceleration (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0000",
+  "timerequest": 1533808360577
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Crest factor - Acceleration (Impulses)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "6.6333",
+  "timerequest": 1533808360577
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Crest factor - Acceleration (Impulses)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "6.6333",
+  "timerequest": 1533808360577
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Crest factor - Acceleration (Impulses)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "6.6333",
+  "timerequest": 1533808360577
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Pulley - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0202",
+  "timerequest": 1533808360577
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Pulley - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0202",
+  "timerequest": 1533808360577
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Pulley - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0202",
+  "timerequest": 1533808360577
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Acceleration",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0006",
+  "timerequest": 1533808360578
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Acceleration",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0006",
+  "timerequest": 1533808360578
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Acceleration",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0006",
+  "timerequest": 1533808360578
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Demodulation",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0004",
+  "timerequest": 1533808360578
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Demodulation",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0004",
+  "timerequest": 1533808360578
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Demodulation",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0004",
+  "timerequest": 1533808360579
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Sheave - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0432",
+  "timerequest": 1533808360579
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Sheave - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0432",
+  "timerequest": 1533808360579
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Sheave - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0432",
+  "timerequest": 1533808360579
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Wellhausen counter - Acceleration (Anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0001",
+  "timerequest": 1533808420581
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Wellhausen counter - Acceleration (Anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0001",
+  "timerequest": 1533808420582
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Wellhausen counter - Acceleration (Anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0001",
+  "timerequest": 1533808420584
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Wellhausen counter - Acceleration (Anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0001",
+  "timerequest": 1533808420585
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Peak2peak - Acceleration (High vibration values)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0186",
+  "timerequest": 1533808420585
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Peak2peak - Acceleration (High vibration values)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0186",
+  "timerequest": 1533808420585
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Peak2peak - Acceleration (High vibration values)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0186",
+  "timerequest": 1533808420585
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Peak2peak - Acceleration (High vibration values)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0186",
+  "timerequest": 1533808420585
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Acceleration (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0014",
+  "timerequest": 1533808420586
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Acceleration (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0014",
+  "timerequest": 1533808420586
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Acceleration (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0014",
+  "timerequest": 1533808420586
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Acceleration (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0014",
+  "timerequest": 1533808420586
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Demodulation (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0006",
+  "timerequest": 1533808420586
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Demodulation (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0006",
+  "timerequest": 1533808420587
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Demodulation (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0006",
+  "timerequest": 1533808420587
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Demodulation (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0006",
+  "timerequest": 1533808420587
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Demodulation (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0049",
+  "timerequest": 1533808420587
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Demodulation (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0049",
+  "timerequest": 1533808420587
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Demodulation (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0049",
+  "timerequest": 1533808420587
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Demodulation (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0049",
+  "timerequest": 1533808420588
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "ISO10816-1 (10Hz - 1kHz) - Velocity",
+  "unit": "mm/s",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0319",
+  "timerequest": 1533808420588
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "ISO10816-1 (10Hz - 1kHz) - Velocity",
+  "unit": "mm/s",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0319",
+  "timerequest": 1533808420588
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "ISO10816-1 (10Hz - 1kHz) - Velocity",
+  "unit": "mm/s",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0319",
+  "timerequest": 1533808420588
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "ISO10816-1 (10Hz - 1kHz) - Velocity",
+  "unit": "mm/s",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0319",
+  "timerequest": 1533808420588
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Temperature",
+  "unit": "°C",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "37.00",
+  "timerequest": 1533808420589
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Temperature",
+  "unit": "°C",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "37.00",
+  "timerequest": 1533808420589
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Temperature",
+  "unit": "°C",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "37.00",
+  "timerequest": 1533808420589
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Temperature",
+  "unit": "°C",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "37.00",
+  "timerequest": 1533808420589
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Acceleration (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0000",
+  "timerequest": 1533808420590
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Acceleration (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0000",
+  "timerequest": 1533808420590
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Acceleration (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0000",
+  "timerequest": 1533808420590
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Acceleration (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0000",
+  "timerequest": 1533808420590
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Crest factor - Acceleration (Impulses)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "6.6333",
+  "timerequest": 1533808420590
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Crest factor - Acceleration (Impulses)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "6.6333",
+  "timerequest": 1533808420591
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Crest factor - Acceleration (Impulses)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "6.6333",
+  "timerequest": 1533808420591
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Crest factor - Acceleration (Impulses)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "6.6333",
+  "timerequest": 1533808420591
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Pulley - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0202",
+  "timerequest": 1533808420591
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Pulley - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0202",
+  "timerequest": 1533808420591
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Pulley - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0202",
+  "timerequest": 1533808420592
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Pulley - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0202",
+  "timerequest": 1533808420592
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Acceleration",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0006",
+  "timerequest": 1533808420592
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Acceleration",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0006",
+  "timerequest": 1533808420592
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Acceleration",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0006",
+  "timerequest": 1533808420592
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Acceleration",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0006",
+  "timerequest": 1533808420593
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Demodulation",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0004",
+  "timerequest": 1533808420593
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Demodulation",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0004",
+  "timerequest": 1533808420593
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Demodulation",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0004",
+  "timerequest": 1533808420593
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Demodulation",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0004",
+  "timerequest": 1533808420593
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Sheave - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0432",
+  "timerequest": 1533808420594
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Sheave - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0432",
+  "timerequest": 1533808420594
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Sheave - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0432",
+  "timerequest": 1533808420594
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Sheave - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0432",
+  "timerequest": 1533808420594
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Wellhausen counter - Acceleration (Anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0001",
+  "timerequest": 1533808480571
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Wellhausen counter - Acceleration (Anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0001",
+  "timerequest": 1533808480571
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Wellhausen counter - Acceleration (Anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0001",
+  "timerequest": 1533808480571
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Wellhausen counter - Acceleration (Anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0001",
+  "timerequest": 1533808480571
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Wellhausen counter - Acceleration (Anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0001",
+  "timerequest": 1533808480572
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Peak2peak - Acceleration (High vibration values)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0186",
+  "timerequest": 1533808480572
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Peak2peak - Acceleration (High vibration values)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0186",
+  "timerequest": 1533808480572
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Peak2peak - Acceleration (High vibration values)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0186",
+  "timerequest": 1533808480572
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Peak2peak - Acceleration (High vibration values)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0186",
+  "timerequest": 1533808480572
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Peak2peak - Acceleration (High vibration values)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0186",
+  "timerequest": 1533808480573
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Acceleration (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0014",
+  "timerequest": 1533808480573
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Acceleration (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0014",
+  "timerequest": 1533808480573
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Acceleration (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0014",
+  "timerequest": 1533808480573
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Acceleration (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0014",
+  "timerequest": 1533808480573
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Acceleration (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0014",
+  "timerequest": 1533808480573
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Demodulation (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0006",
+  "timerequest": 1533808480574
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Demodulation (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0006",
+  "timerequest": 1533808480574
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Demodulation (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0006",
+  "timerequest": 1533808480574
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Demodulation (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0006",
+  "timerequest": 1533808480574
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Demodulation (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0006",
+  "timerequest": 1533808480574
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Demodulation (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0049",
+  "timerequest": 1533808480575
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Demodulation (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0049",
+  "timerequest": 1533808480575
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Demodulation (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0049",
+  "timerequest": 1533808480575
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Demodulation (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0049",
+  "timerequest": 1533808480575
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Demodulation (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0049",
+  "timerequest": 1533808480575
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "ISO10816-1 (10Hz - 1kHz) - Velocity",
+  "unit": "mm/s",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0319",
+  "timerequest": 1533808480575
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "ISO10816-1 (10Hz - 1kHz) - Velocity",
+  "unit": "mm/s",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0319",
+  "timerequest": 1533808480576
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "ISO10816-1 (10Hz - 1kHz) - Velocity",
+  "unit": "mm/s",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0319",
+  "timerequest": 1533808480577
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "ISO10816-1 (10Hz - 1kHz) - Velocity",
+  "unit": "mm/s",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0319",
+  "timerequest": 1533808480577
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "ISO10816-1 (10Hz - 1kHz) - Velocity",
+  "unit": "mm/s",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0319",
+  "timerequest": 1533808480577
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Temperature",
+  "unit": "°C",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "37.00",
+  "timerequest": 1533808480577
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Temperature",
+  "unit": "°C",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "37.00",
+  "timerequest": 1533808480577
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Temperature",
+  "unit": "°C",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "37.00",
+  "timerequest": 1533808480577
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Temperature",
+  "unit": "°C",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "37.00",
+  "timerequest": 1533808480578
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Temperature",
+  "unit": "°C",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "37.00",
+  "timerequest": 1533808480578
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Acceleration (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0000",
+  "timerequest": 1533808480578
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Acceleration (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0000",
+  "timerequest": 1533808480578
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Acceleration (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0000",
+  "timerequest": 1533808480578
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Acceleration (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0000",
+  "timerequest": 1533808480579
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Acceleration (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0000",
+  "timerequest": 1533808480579
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Crest factor - Acceleration (Impulses)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "6.6333",
+  "timerequest": 1533808480579
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Crest factor - Acceleration (Impulses)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "6.6333",
+  "timerequest": 1533808480579
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Crest factor - Acceleration (Impulses)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "6.6333",
+  "timerequest": 1533808480579
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Crest factor - Acceleration (Impulses)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "6.6333",
+  "timerequest": 1533808480580
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Crest factor - Acceleration (Impulses)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "6.6333",
+  "timerequest": 1533808480580
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Pulley - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0202",
+  "timerequest": 1533808480580
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Pulley - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0202",
+  "timerequest": 1533808480580
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Pulley - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0202",
+  "timerequest": 1533808480580
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Pulley - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0202",
+  "timerequest": 1533808480580
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Pulley - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0202",
+  "timerequest": 1533808480581
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Acceleration",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0006",
+  "timerequest": 1533808480581
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Acceleration",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0006",
+  "timerequest": 1533808480581
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Acceleration",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0006",
+  "timerequest": 1533808480581
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Acceleration",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0006",
+  "timerequest": 1533808480581
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Acceleration",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0006",
+  "timerequest": 1533808480582
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Demodulation",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0004",
+  "timerequest": 1533808480582
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Demodulation",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0004",
+  "timerequest": 1533808480582
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Demodulation",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0004",
+  "timerequest": 1533808480582
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Demodulation",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0004",
+  "timerequest": 1533808480582
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Demodulation",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0004",
+  "timerequest": 1533808480582
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Sheave - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0432",
+  "timerequest": 1533808480583
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Sheave - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0432",
+  "timerequest": 1533808480583
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Sheave - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0432",
+  "timerequest": 1533808480583
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Sheave - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0432",
+  "timerequest": 1533808480583
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Sheave - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0432",
+  "timerequest": 1533808480583
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Wellhausen counter - Acceleration (Anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0001",
+  "timerequest": 1533808540577
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Wellhausen counter - Acceleration (Anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0001",
+  "timerequest": 1533808540578
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Wellhausen counter - Acceleration (Anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0001",
+  "timerequest": 1533808540578
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Wellhausen counter - Acceleration (Anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0001",
+  "timerequest": 1533808540578
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Wellhausen counter - Acceleration (Anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0001",
+  "timerequest": 1533808540578
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Wellhausen counter - Acceleration (Anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0001",
+  "timerequest": 1533808540578
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Peak2peak - Acceleration (High vibration values)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0186",
+  "timerequest": 1533808540579
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Peak2peak - Acceleration (High vibration values)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0186",
+  "timerequest": 1533808540579
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Peak2peak - Acceleration (High vibration values)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0186",
+  "timerequest": 1533808540579
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Peak2peak - Acceleration (High vibration values)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0186",
+  "timerequest": 1533808540579
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Peak2peak - Acceleration (High vibration values)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0186",
+  "timerequest": 1533808540579
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Peak2peak - Acceleration (High vibration values)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0186",
+  "timerequest": 1533808540580
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Acceleration (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0014",
+  "timerequest": 1533808540580
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Acceleration (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0014",
+  "timerequest": 1533808540580
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Acceleration (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0014",
+  "timerequest": 1533808540580
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Acceleration (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0014",
+  "timerequest": 1533808540580
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Acceleration (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0014",
+  "timerequest": 1533808540580
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Acceleration (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0014",
+  "timerequest": 1533808540581
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Demodulation (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0006",
+  "timerequest": 1533808540581
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Demodulation (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0006",
+  "timerequest": 1533808540581
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Demodulation (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0006",
+  "timerequest": 1533808540581
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Demodulation (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0006",
+  "timerequest": 1533808540581
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Demodulation (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0006",
+  "timerequest": 1533808540581
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Demodulation (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0006",
+  "timerequest": 1533808540582
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Demodulation (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0049",
+  "timerequest": 1533808540582
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Demodulation (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0049",
+  "timerequest": 1533808540582
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Demodulation (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0049",
+  "timerequest": 1533808540582
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Demodulation (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0049",
+  "timerequest": 1533808540582
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Demodulation (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0049",
+  "timerequest": 1533808540582
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Demodulation (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0049",
+  "timerequest": 1533808540583
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "ISO10816-1 (10Hz - 1kHz) - Velocity",
+  "unit": "mm/s",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0319",
+  "timerequest": 1533808540583
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "ISO10816-1 (10Hz - 1kHz) - Velocity",
+  "unit": "mm/s",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0319",
+  "timerequest": 1533808540583
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "ISO10816-1 (10Hz - 1kHz) - Velocity",
+  "unit": "mm/s",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0319",
+  "timerequest": 1533808540583
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "ISO10816-1 (10Hz - 1kHz) - Velocity",
+  "unit": "mm/s",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0319",
+  "timerequest": 1533808540583
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "ISO10816-1 (10Hz - 1kHz) - Velocity",
+  "unit": "mm/s",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0319",
+  "timerequest": 1533808540583
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "ISO10816-1 (10Hz - 1kHz) - Velocity",
+  "unit": "mm/s",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0319",
+  "timerequest": 1533808540584
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Temperature",
+  "unit": "°C",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "37.00",
+  "timerequest": 1533808540584
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Temperature",
+  "unit": "°C",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "37.00",
+  "timerequest": 1533808540585
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Temperature",
+  "unit": "°C",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "37.00",
+  "timerequest": 1533808540585
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Temperature",
+  "unit": "°C",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "37.00",
+  "timerequest": 1533808540586
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Temperature",
+  "unit": "°C",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "37.00",
+  "timerequest": 1533808540586
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Temperature",
+  "unit": "°C",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "37.00",
+  "timerequest": 1533808540586
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Acceleration (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0000",
+  "timerequest": 1533808540586
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Acceleration (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0000",
+  "timerequest": 1533808540586
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Acceleration (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0000",
+  "timerequest": 1533808540587
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Acceleration (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0000",
+  "timerequest": 1533808540587
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Acceleration (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0000",
+  "timerequest": 1533808540587
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Acceleration (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0000",
+  "timerequest": 1533808540587
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Crest factor - Acceleration (Impulses)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "6.6333",
+  "timerequest": 1533808540587
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Crest factor - Acceleration (Impulses)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "6.6333",
+  "timerequest": 1533808540588
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Crest factor - Acceleration (Impulses)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "6.6333",
+  "timerequest": 1533808540588
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Crest factor - Acceleration (Impulses)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "6.6333",
+  "timerequest": 1533808540588
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Crest factor - Acceleration (Impulses)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "6.6333",
+  "timerequest": 1533808540588
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Crest factor - Acceleration (Impulses)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "6.6333",
+  "timerequest": 1533808540588
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Pulley - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0202",
+  "timerequest": 1533808540589
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Pulley - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0202",
+  "timerequest": 1533808540589
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Pulley - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0202",
+  "timerequest": 1533808540589
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Pulley - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0202",
+  "timerequest": 1533808540589
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Pulley - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0202",
+  "timerequest": 1533808540589
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Pulley - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0202",
+  "timerequest": 1533808540590
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Acceleration",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0006",
+  "timerequest": 1533808540590
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Acceleration",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0006",
+  "timerequest": 1533808540590
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Acceleration",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0006",
+  "timerequest": 1533808540590
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Acceleration",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0006",
+  "timerequest": 1533808540590
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Acceleration",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0006",
+  "timerequest": 1533808540591
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Acceleration",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0006",
+  "timerequest": 1533808540591
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Demodulation",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0004",
+  "timerequest": 1533808540591
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Demodulation",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0004",
+  "timerequest": 1533808540591
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Demodulation",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0004",
+  "timerequest": 1533808540591
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Demodulation",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0004",
+  "timerequest": 1533808540591
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Demodulation",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0004",
+  "timerequest": 1533808540592
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Demodulation",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0004",
+  "timerequest": 1533808540592
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Sheave - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0432",
+  "timerequest": 1533808540592
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Sheave - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0432",
+  "timerequest": 1533808540592
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Sheave - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0432",
+  "timerequest": 1533808540592
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Sheave - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0432",
+  "timerequest": 1533808540592
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Sheave - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0432",
+  "timerequest": 1533808540593
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Sheave - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0432",
+  "timerequest": 1533808540593
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Wellhausen counter - Acceleration (Anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0001",
+  "timerequest": 1533808600574
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Wellhausen counter - Acceleration (Anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0001",
+  "timerequest": 1533808600574
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Wellhausen counter - Acceleration (Anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0001",
+  "timerequest": 1533808600574
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Wellhausen counter - Acceleration (Anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0001",
+  "timerequest": 1533808600574
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Wellhausen counter - Acceleration (Anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0001",
+  "timerequest": 1533808600575
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Wellhausen counter - Acceleration (Anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0001",
+  "timerequest": 1533808600575
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Wellhausen counter - Acceleration (Anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0001",
+  "timerequest": 1533808600575
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Peak2peak - Acceleration (High vibration values)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0186",
+  "timerequest": 1533808600576
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Peak2peak - Acceleration (High vibration values)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0186",
+  "timerequest": 1533808600576
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Peak2peak - Acceleration (High vibration values)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0186",
+  "timerequest": 1533808600576
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Peak2peak - Acceleration (High vibration values)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0186",
+  "timerequest": 1533808600576
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Peak2peak - Acceleration (High vibration values)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0186",
+  "timerequest": 1533808600576
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Peak2peak - Acceleration (High vibration values)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0186",
+  "timerequest": 1533808600576
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Peak2peak - Acceleration (High vibration values)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0186",
+  "timerequest": 1533808600577
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Acceleration (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0014",
+  "timerequest": 1533808600577
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Acceleration (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0014",
+  "timerequest": 1533808600577
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Acceleration (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0014",
+  "timerequest": 1533808600577
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Acceleration (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0014",
+  "timerequest": 1533808600577
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Acceleration (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0014",
+  "timerequest": 1533808600577
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Acceleration (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0014",
+  "timerequest": 1533808600577
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Acceleration (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0014",
+  "timerequest": 1533808600579
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Demodulation (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0006",
+  "timerequest": 1533808600579
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Demodulation (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0006",
+  "timerequest": 1533808600580
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Demodulation (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0006",
+  "timerequest": 1533808600580
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Demodulation (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0006",
+  "timerequest": 1533808600580
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Demodulation (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0006",
+  "timerequest": 1533808600580
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Demodulation (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0006",
+  "timerequest": 1533808600580
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "RMS broad band - Demodulation (Overall status)",
+  "unit": "g",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0006",
+  "timerequest": 1533808600580
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Demodulation (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0049",
+  "timerequest": 1533808600581
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Demodulation (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0049",
+  "timerequest": 1533808600581
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Demodulation (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0049",
+  "timerequest": 1533808600581
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Demodulation (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0049",
+  "timerequest": 1533808600581
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Demodulation (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0049",
+  "timerequest": 1533808600581
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Demodulation (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0049",
+  "timerequest": 1533808600581
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Demodulation (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0049",
+  "timerequest": 1533808600581
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "ISO10816-1 (10Hz - 1kHz) - Velocity",
+  "unit": "mm/s",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0319",
+  "timerequest": 1533808600582
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "ISO10816-1 (10Hz - 1kHz) - Velocity",
+  "unit": "mm/s",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0319",
+  "timerequest": 1533808600582
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "ISO10816-1 (10Hz - 1kHz) - Velocity",
+  "unit": "mm/s",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0319",
+  "timerequest": 1533808600582
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "ISO10816-1 (10Hz - 1kHz) - Velocity",
+  "unit": "mm/s",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0319",
+  "timerequest": 1533808600582
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "ISO10816-1 (10Hz - 1kHz) - Velocity",
+  "unit": "mm/s",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0319",
+  "timerequest": 1533808600582
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "ISO10816-1 (10Hz - 1kHz) - Velocity",
+  "unit": "mm/s",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0319",
+  "timerequest": 1533808600582
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "ISO10816-1 (10Hz - 1kHz) - Velocity",
+  "unit": "mm/s",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0319",
+  "timerequest": 1533808600583
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Temperature",
+  "unit": "°C",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "37.00",
+  "timerequest": 1533808600583
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Temperature",
+  "unit": "°C",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "37.00",
+  "timerequest": 1533808600583
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Temperature",
+  "unit": "°C",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "37.00",
+  "timerequest": 1533808600583
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Temperature",
+  "unit": "°C",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "37.00",
+  "timerequest": 1533808600583
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Temperature",
+  "unit": "°C",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "37.00",
+  "timerequest": 1533808600583
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Temperature",
+  "unit": "°C",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "37.00",
+  "timerequest": 1533808600584
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Temperature",
+  "unit": "°C",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "37.00",
+  "timerequest": 1533808600584
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Acceleration (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0000",
+  "timerequest": 1533808600584
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Acceleration (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0000",
+  "timerequest": 1533808600584
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Acceleration (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0000",
+  "timerequest": 1533808600584
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Acceleration (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0000",
+  "timerequest": 1533808600584
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Acceleration (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0000",
+  "timerequest": 1533808600584
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Acceleration (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0000",
+  "timerequest": 1533808600585
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Periodic value - Acceleration (recurring anomalies)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "0.0000",
+  "timerequest": 1533808600585
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Crest factor - Acceleration (Impulses)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "6.6333",
+  "timerequest": 1533808600585
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Crest factor - Acceleration (Impulses)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "6.6333",
+  "timerequest": 1533808600585
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Crest factor - Acceleration (Impulses)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "6.6333",
+  "timerequest": 1533808600585
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Crest factor - Acceleration (Impulses)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "6.6333",
+  "timerequest": 1533808600585
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Crest factor - Acceleration (Impulses)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "6.6333",
+  "timerequest": 1533808600586
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Crest factor - Acceleration (Impulses)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "6.6333",
+  "timerequest": 1533808600586
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Crest factor - Acceleration (Impulses)",
+  "unit": "-",
+  "timestamp": "2018-07-26T06:40:01.714Z",
+  "value": "6.6333",
+  "timerequest": 1533808600587
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Pulley - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0202",
+  "timerequest": 1533808600587
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Pulley - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0202",
+  "timerequest": 1533808600587
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Pulley - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0202",
+  "timerequest": 1533808600587
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Pulley - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0202",
+  "timerequest": 1533808600587
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Pulley - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0202",
+  "timerequest": 1533808600587
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Pulley - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0202",
+  "timerequest": 1533808600588
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Pulley - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0202",
+  "timerequest": 1533808600588
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Acceleration",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0006",
+  "timerequest": 1533808600588
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Acceleration",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0006",
+  "timerequest": 1533808600588
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Acceleration",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0006",
+  "timerequest": 1533808600588
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Acceleration",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0006",
+  "timerequest": 1533808600588
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Acceleration",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0006",
+  "timerequest": 1533808600588
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Acceleration",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0006",
+  "timerequest": 1533808600589
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Acceleration",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0006",
+  "timerequest": 1533808600589
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Demodulation",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0004",
+  "timerequest": 1533808600589
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Demodulation",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0004",
+  "timerequest": 1533808600589
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Demodulation",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0004",
+  "timerequest": 1533808600589
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Demodulation",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0004",
+  "timerequest": 1533808600590
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Demodulation",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0004",
+  "timerequest": 1533808600590
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Demodulation",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0004",
+  "timerequest": 1533808600590
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "Gear tooth wear - Demodulation",
+  "unit": "g",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0004",
+  "timerequest": 1533808600590
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Sheave - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0432",
+  "timerequest": 1533808600590
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Sheave - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0432",
+  "timerequest": 1533808600590
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Sheave - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0432",
+  "timerequest": 1533808600590
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Sheave - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0432",
+  "timerequest": 1533808600591
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Sheave - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0432",
+  "timerequest": 1533808600591
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Sheave - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0432",
+  "timerequest": 1533808600591
+}{
+  "deviceid": "GearBox01",
+  "groupdeviceid": 1,
+  "name": "1x to 5x Sheave - Velocity (e.g. imbalance, alignment error, structural problems)",
+  "unit": "mm/s",
+  "timestamp": "2018-07-25T06:40:19.023Z",
+  "value": "0.0432",
+  "timerequest": 1533808600591
+}

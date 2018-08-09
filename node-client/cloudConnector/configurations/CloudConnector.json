@@ -1,0 +1,25 @@
+{
+    "cloudside": 
+    [{
+            "name": "Ubidots01",
+            "protocol":
+            {
+                "name": "MQTT",
+                "host": "mqtt://things.ubidots.com",
+                "token": "BBFF-Fr0xS9WndPUmm5qkoXMXtkaPQTLelZ",
+                "qos": 1,
+                "retain": "false"
+            }
+    }],
+
+    "localside": 
+    {
+            "name": "LocalCommunication",
+            "protocol":
+            {
+                "name": "WebSocket",
+                "host": "localhost",
+                "port": "1111"
+            }
+    }
+}
