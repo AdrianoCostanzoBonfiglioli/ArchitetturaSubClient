@@ -1,17 +1,37 @@
-var _deviceConnector; //global
-
-const DeviceConnector = require('./deviceConnector/deviceconnector');
-var _DeviceConfig = require('./deviceConnector/configurations/FAGSmartCheck.json');
+const FolderTocheck = './deviceConnector/configurations/';
 
 
-if (_DeviceConfig.deviceinfo.deviceID != "") {
+var StartChild = function(data)
+{
+    const { fork } = require('child_process');
 
-    console.log("Start");
+    const forked = fork('./deviceConnector/child.js');
 
-    _deviceConnector = new DeviceConnector(_DeviceConfig);
+    forked.send(data);
 
-} else {
-    console.log("No Devices Available");
+    forked.on('message', (msg) => {
+    console.log(msg);
+    });
 }
 
+var CheckConfig = function(namefile)
+{
+    var _DeviceConfig = require('./deviceConnector/configurations/' + namefile);
+
+    if (_DeviceConfig.deviceinfo.deviceID != "") {
+
+        console.log("Start Device Connector from: " + namefile);
+        StartChild(_DeviceConfig);
+
+    } else {
+        console.log("JSON conf corrupted");
+    }
+}
+
+// start
+const fs = require('fs');
+
+fs.readdirSync(FolderTocheck).forEach(file => {
+  CheckConfig(file);
+})
 

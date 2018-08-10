@@ -119,6 +119,8 @@ var CreateJSON = function (ParamConfig, Index, Pkt)
     }
     
     SendJSONData(data);
+
+    //qui puoi aggiungere o la scrittura su disco o in generale un sistema di backup, devi copiarti 'data' da qualche parte
 }
 
 

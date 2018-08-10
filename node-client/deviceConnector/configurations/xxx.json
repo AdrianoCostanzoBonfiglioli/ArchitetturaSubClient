@@ -1,0 +1,35 @@
+{
+    "deviceinfo": 
+    {
+            "deviceid": "GearBox03",
+            "groupdeviceid": 1,
+            "protocol":
+            {
+                "name": "SOAP",
+                "host": "192.168.1.1",
+                "port": "8080",
+                "user": "admin",
+                "password": "admin123",
+                "wsdl": "http://10.1.154.14:10080/wsdl/smartcheck_status_201601.wsdl",
+                "endpoint": "http://10.1.154.14:10080/smcstatus",
+                "interval":  60000
+            }
+    },
+
+    "parameters": 
+    [    
+        { 
+            "name": "Wellhausen counter - XXX",
+            "refreshrate": 0,
+            "interval":  5000,  
+            "windowtime": 0,  
+            "decimal": 4,
+            "unit": "-",
+            "Category": "Others",
+            "additionalinfo":
+            {
+                "baseid": "12B9AE4E-C340-481D-A8ED-4DB01B73C59D"
+            }
+        }
+    ]
+}
