@@ -16,6 +16,32 @@
             }
     },
 
+    "interfacesinfo": 
+    [    
+        { 
+            "name": "disk01",
+            "info":
+            {
+                "protocol": "FILE",
+                "path": "./disk/testYYY",
+                "port": "xxx",
+                "user": "admin",
+                "password": "admin123"
+            }
+        },
+        {
+            "name": "ws01",
+            "info":
+            {
+                "protocol": "WS",
+                "host": "127.0.0.1",
+                "port": "1111",
+                "user": "admin",
+                "password": "pass"
+            }
+        }
+    ],
+
     "parameters": 
     [    
         { 

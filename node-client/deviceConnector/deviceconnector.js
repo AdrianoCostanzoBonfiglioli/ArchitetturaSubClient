@@ -5,7 +5,6 @@ var array = [];
 var DeviceConnector = function (config) 
 {
     globalconfig = config; // set new global config
-
     InstanceSelect(globalconfig.deviceinfo.protocol.name);
 }
 
@@ -108,6 +107,7 @@ var CreateJSON = function (ParamConfig, Index, Pkt)
     Value = Approx(ParamConfig.decimal, Value );
 
     // formato dati ready to the cloud
+    // THIS IS SO IMPORTANT - DATA MODEL !
     let data = {
         deviceid: globalconfig.deviceinfo.deviceid,
         groupdeviceid: globalconfig.deviceinfo.groupdeviceid,
@@ -126,22 +126,72 @@ var CreateJSON = function (ParamConfig, Index, Pkt)
 
 var SendJSONData = function (data) 
 {
+    var InstanceMax = globalconfig.interfacesinfo.length;
+
+    for (let i = 0; i < InstanceMax; i++) 
+    {
+
+        var protocol = globalconfig.interfacesinfo[i].info.protocol;
+        var config = globalconfig.interfacesinfo[i];
+
+        switch(protocol) 
+        {
+            case "WS":
+                WSInstance(data, config);
+            break;
+
+            case "FILE":
+                FILEInstance(data, config);
+            break;
+
+            default:
+            break;
+        }
+    }
+}
+
+var WSInstance = function(data, config)
+{
     var WebSocket = require('ws');
-    var ws = new WebSocket("ws://localhost:1111");
+
+    var name = config.name;
+    var host = config.info.host;
+    var port = config.info.port;
+
+    var url = 'ws://' + host + ':' + port;
+
+    var ws = new WebSocket(url);
 
     ws.on('message', function(message) {
-    console.log('Received: ' + message);
+    console.log(name +' Received: ' + message);
     ws.send(JSON.stringify(data));
     });
 
     ws.on('close', function(code) {
-    console.log('Disconnected: ' + code);
+    console.log(name +' Disconnected: ' + code);
     });
 
     ws.on('error', function(error) {
-    console.log('Error: ' + error.code);
+    console.log(name +' Error: ' + error.code);
     });
 }
+
+var FILEInstance = function(data, config)
+{
+    const fs = require('fs');
+    const content = JSON.stringify(data);
+    
+    fs.appendFileSync(config.info.path, content, 'utf8', function (err) {
+        if (err) {
+            return console.log(err);
+        }
+    
+        console.log("The file was saved!");
+    }); 
+
+}
+
+
 
 var InstanceSelect = function (protocolname) 
 {
