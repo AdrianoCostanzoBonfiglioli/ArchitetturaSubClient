@@ -1,7 +1,5 @@
 var globalconfig;
 
-var array = [];
-
 var DeviceConnector = function (config) 
 {
     globalconfig = config; // set new global config
@@ -62,7 +60,6 @@ var TaskClientCreate = function(request ,wsdl, options, endpoint)
                     //resolved
                     function(result){
                         console.log("TaskSchedule!");
-                        CreateIndexElements(result);
                         MatchConfToServiceAndJSON(result);
                         //console.log(result);
                     },
@@ -83,13 +80,26 @@ var TaskClientCreate = function(request ,wsdl, options, endpoint)
 var MatchConfToServiceAndJSON = function (pkt) 
 {
 
+    var arrayIndex = [];
+
+    // create arrey baseID and index
+
+    for (let j = 0; j < pkt.MeasurementJobStatus.length; j++)
+    {   
+        for (let i = 0; i < pkt.MeasurementJobStatus[j].CharacteristicValueStatus.length; i++)
+        {
+            var BaseId = pkt.MeasurementJobStatus[j].CharacteristicValueStatus[i].BaseId;
+            arrayIndex.push({BaseId: BaseId, j: j, i: i});
+        }
+    }
+
     for (let i = 0; i < globalconfig.parameters.length; i++) 
     {
-        for (var j = 0; j < array.length; j++) 
+        for (var j = 0; j < arrayIndex.length; j++) 
         {
-            if (globalconfig.parameters[i].additionalinfo.baseid === array[j].BaseId) 
+            if (globalconfig.parameters[i].additionalinfo.baseid === arrayIndex[j].BaseId) 
             {
-                CreateJSON(globalconfig.parameters[i], array[j], pkt);
+                CreateJSON(globalconfig.parameters[i], arrayIndex[j], pkt);
             } 
         }
     }
@@ -191,8 +201,6 @@ var FILEInstance = function(data, config)
 
 }
 
-
-
 var InstanceSelect = function (protocolname) 
 {
     switch(protocolname) 
@@ -202,20 +210,6 @@ var InstanceSelect = function (protocolname)
             break;
     }
 } 
-
-
-var CreateIndexElements = function (result)
-{
-
-    for (let j = 0; j < result.MeasurementJobStatus.length; j++)
-    {   
-        for (let i = 0; i < result.MeasurementJobStatus[j].CharacteristicValueStatus.length; i++)
-        {
-            var BaseId = result.MeasurementJobStatus[j].CharacteristicValueStatus[i].BaseId;
-            array.push({BaseId: BaseId, j: j, i: i});
-        }
-    }
-}
 
 var Approx = function (num, value) 
 {
