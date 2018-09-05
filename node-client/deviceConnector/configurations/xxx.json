@@ -6,12 +6,11 @@
             "protocol":
             {
                 "name": "SOAP",
-                "host": "192.168.1.1",
-                "port": "8080",
+                "host": "10.1.71.100:80",
                 "user": "admin",
                 "password": "admin123",
-                "wsdl": "http://10.1.154.14:10080/wsdl/smartcheck_status_201601.wsdl",
-                "endpoint": "http://10.1.154.14:10080/smcstatus",
+                "wsdl": "/wsdl/smartcheck_status_201601.wsdl",
+                "endpoint": "/smcstatus",
                 "interval":  60000
             }
     },
@@ -30,7 +29,7 @@
             }
         },
         {
-            "name": "ws01",
+            "name": "wsXX_xxx",
             "info":
             {
                 "protocol": "WS",
@@ -54,7 +53,7 @@
             "Category": "Others",
             "additionalinfo":
             {
-                "baseid": "12B9AE4E-C340-481D-A8ED-4DB01B73C59D"
+                "baseid": "B9BEB48D-9B89-43D6-8C6B-5F2590A2EDF7"
             }
         }
     ]

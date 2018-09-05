@@ -7,12 +7,13 @@
     "license": "TBD",
     "dependencies": {
         "bluebird": "^3.5.1",
+        "jsmodbus": "^3.1.0",
         "moment": "^2.10.6",
         "mqtt": "^2.18.3",
         "soap": "^0.24.0",
         "socket.io-client": "^2.0.4",
+        "ubidots": "0.0.4",
         "ws": "^6.0.0",
-        "yargs": "^3.31.0",
-        "ubidots": "0.0.4"
+        "yargs": "^3.31.0"
     }
 }

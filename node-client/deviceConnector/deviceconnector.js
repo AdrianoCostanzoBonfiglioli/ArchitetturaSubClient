@@ -9,12 +9,14 @@ var DeviceConnector = function (config)
 
 var SoapDeviceConnector = function (config)
 {
-    console.log("Start SOAP connector");
+    console.log(globalconfig.deviceinfo.deviceid + ": Start SOAP connector");
 
-    var wsdl = globalconfig.deviceinfo.protocol.wsdl;
     var user = globalconfig.deviceinfo.protocol.user;
     var password = globalconfig.deviceinfo.protocol.password;
-    var endpoint = globalconfig.deviceinfo.protocol.endpoint; 
+    var host = globalconfig.deviceinfo.protocol.host;
+
+    var wsdl = "http://" + host + globalconfig.deviceinfo.protocol.wsdl ;
+    var endpoint = "http://" + host + globalconfig.deviceinfo.protocol.endpoint; 
 
     var request = {'smc:UserId': user, 'smc:Password': password}; 
     var options = {envelopeKey: 'soapenv', forceSoap12Headers: true}; 
@@ -59,9 +61,8 @@ var TaskClientCreate = function(request ,wsdl, options, endpoint)
                 apiCall(client).then(
                     //resolved
                     function(result){
-                        console.log("TaskSchedule!");
+                        console.log(globalconfig.deviceinfo.deviceid + ": TaskSchedule");
                         MatchConfToServiceAndJSON(result);
-                        //console.log(result);
                     },
                     //rejected
                     function(err){
@@ -81,6 +82,7 @@ var MatchConfToServiceAndJSON = function (pkt)
 {
 
     var arrayIndex = [];
+    var NoEntry = 0;
 
     // create arrey baseID and index
 
@@ -100,9 +102,14 @@ var MatchConfToServiceAndJSON = function (pkt)
             if (globalconfig.parameters[i].additionalinfo.baseid === arrayIndex[j].BaseId) 
             {
                 CreateJSON(globalconfig.parameters[i], arrayIndex[j], pkt);
+                console.log(globalconfig.deviceinfo.deviceid + ": PKT JSON Created !");
+                NoEntry = 1;
             } 
         }
     }
+
+    if (NoEntry == 0)
+        console.log(globalconfig.deviceinfo.deviceid + ": No Match between JSON and SOAP PKT, check correct baseID parameters");
 }
 
 var CreateJSON = function (ParamConfig, Index, Pkt) 
@@ -129,8 +136,6 @@ var CreateJSON = function (ParamConfig, Index, Pkt)
     }
     
     SendJSONData(data);
-
-    //qui puoi aggiungere o la scrittura su disco o in generale un sistema di backup, devi copiarti 'data' da qualche parte
 }
 
 
@@ -208,7 +213,12 @@ var InstanceSelect = function (protocolname)
         case "SOAP":
             SoapDeviceConnector(globalconfig);
             break;
+
+        case "MODBUS_INVERTER":
+            SoapDeviceConnector(globalconfig); // ModbusDeviceConnector(globalconfig, type); // Inverter type
+            break;
     }
+
 } 
 
 var Approx = function (num, value) 

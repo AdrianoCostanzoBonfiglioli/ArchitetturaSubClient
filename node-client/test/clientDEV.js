@@ -1,5 +1,5 @@
 var soap = require('soap');
-var url = 'http://10.1.154.14:10080/wsdl/smartcheck_status_201601.wsdl';
+var url = 'http://10.1.71.100:80/wsdl/smartcheck_status_201601.wsdl';
 
 var request = { 'smc:UserId': 'admin', 'smc:Password': 'admin123' };
 var options = { envelopeKey: 'soapenv', forceSoap12Headers: true };
@@ -29,20 +29,20 @@ var apiCall = function(client){
     });
 };
 
-createClient('http://10.1.154.14:10080/smcstatus').then(
+createClient('http://10.1.71.100:80/smcstatus').then(
     // manage the resolve
     function(client){
         setInterval( function() {
             apiCall(client).then(
                 //resolved
                 function(result){
-                    console.log(result);
+                    console.log(result.MeasurementJobStatus[1].CharacteristicValueStatus);
                 },
                 //rejected
                 function(err){
                     //return 1; 
                 }
-            )}, 10000 // every 1 sec
+            )}, 10000 // every 10 sec
         ); 
     },
     //manage the reject

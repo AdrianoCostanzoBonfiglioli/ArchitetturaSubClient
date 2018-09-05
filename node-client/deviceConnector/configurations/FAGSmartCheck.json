@@ -1,21 +1,4 @@
 {
-    "deviceinfo": 
-    {
-            "deviceid": "GearBox01",
-            "groupdeviceid": 1,
-            "protocol":
-            {
-                "name": "SOAP",
-                "host": "192.168.1.1",
-                "port": "8080",
-                "user": "admin",
-                "password": "admin123",
-                "wsdl": "http://10.1.154.14:10080/wsdl/smartcheck_status_201601.wsdl",
-                "endpoint": "http://10.1.154.14:10080/smcstatus",
-                "interval":  60000
-            }
-    },
-
     "interfacesinfo": 
     [    
         { 
@@ -30,7 +13,7 @@
             }
         },
         {
-            "name": "ws01",
+            "name": "wsXX_TestFAG",
             "info":
             {
                 "protocol": "WS",
@@ -41,6 +24,22 @@
             }
         }
     ],
+
+    "deviceinfo": 
+    {
+            "deviceid": "GearBox01",
+            "groupdeviceid": 1,
+            "protocol":
+            {
+                "name": "SOAP",
+                "host": "10.1.71.100:80",
+                "user": "admin",
+                "password": "admin123",
+                "wsdl": "/wsdl/smartcheck_status_201601.wsdl",
+                "endpoint": "/smcstatus",
+                "interval":  60000
+            }
+    },
 
     "parameters": 
     [    
@@ -54,7 +53,7 @@
             "Category": "Others",
             "additionalinfo":
             {
-                "baseid": "12B9AE4E-C340-481D-A8ED-4DB01B73C59D"
+                "baseid": "B9BEB48D-9B89-43D6-8C6B-5F2590A2EDF7"
             }
         },
         { 
@@ -67,7 +66,7 @@
             "Category": "Statistics",
             "additionalinfo":
             {
-                "baseid": "0F9EC938-4AFF-4468-9A22-DD170A865B54"
+                "baseid": "11613B03-3F4E-461C-9626-C5862853E96B"
             }
         },
         { 
@@ -80,7 +79,7 @@
             "Category": "Statistics",
             "additionalinfo":
             {
-                "baseid": "E652655A-99A4-4DF6-B3FA-F2F10BCDE0F3"
+                "baseid": "9853183C-40F0-4ED4-BF2E-DCDB55162CCA"
             }
         },
         { 
@@ -93,7 +92,7 @@
             "Category": "Frequency",
             "additionalinfo":
             {
-                "baseid": "2D8A8C7E-C4DA-4CC4-B855-E7C72CB3C655"
+                "baseid": "5572D627-8631-431E-BCAD-98CA78BBE47C"
             }
         },
         { 
@@ -106,7 +105,7 @@
             "Category": "Frequency",
             "additionalinfo":
             {
-                "baseid": "CA48B0FA-1644-463E-BCDE-13DA43A92D76"
+                "baseid": "3CB48E86-54E6-4DFB-8250-CC2635E2E380"
             }
         },
         { 
@@ -119,7 +118,7 @@
             "Category": "Others",
             "additionalinfo":
             {
-                "baseid": "3DD26165-7198-4952-B8A8-9A91155BE0FC"
+                "baseid": "0B4E56A8-0E49-4A22-A302-F50E8F4D74E0"
             }
         },
         { 
@@ -132,7 +131,7 @@
             "Category": "Temperature",
             "additionalinfo":
             {
-                "baseid": "EC0172A2-1F31-4199-B7FA-9F757A63C40A"
+                "baseid": "64E185D9-9738-47B2-93AD-9B6011212C4F"
             }
         },
         { 
@@ -145,7 +144,7 @@
             "Category": "Frequency",
             "additionalinfo":
             {
-                "baseid": "7754C608-71E6-4E74-A7ED-C2620DDE4551"
+                "baseid": "F2D5DC8C-B023-4D82-AF46-6157A37FBF9F"
             }
         },
         { 
@@ -158,59 +157,20 @@
             "Category": "Statistics",
             "additionalinfo":
             {
-                "baseid": "58B6CC55-AE4F-462B-9138-8D0CCDD840C7"
+                "baseid": "200783BF-F9EF-472A-B42C-AC3D52A3746A"
             }
         },
         {
-            "name": "1x to 5x Pulley - Velocity (e.g. imbalance, alignment error, structural problems)",
+            "name": "Torque Meter",
             "refreshrate": 0,
             "interval":  5000,  
             "windowtime": 0,  
             "decimal": 4,
-            "unit": "mm/s",
-            "Category": "Planetary",
+            "unit": "Nm",
+            "Category": "Torque",
             "additionalinfo":
             {
-                "baseid": "F373F556-4B89-45B2-B09B-1F760415B8B6"
-            }
-        },
-        {
-            "name": "Gear tooth wear - Acceleration",
-            "refreshrate": 0,
-            "interval":  5000,  
-            "windowtime": 0,  
-            "decimal": 4,
-            "unit": "g",
-            "Category": "Planetary",
-            "additionalinfo":
-            {
-                "baseid": "1F9C22A8-A203-43E4-8E7C-DDC959BC54FD"
-            }
-        },
-        {
-            "name": "Gear tooth wear - Demodulation",
-            "refreshrate": 0,
-            "interval":  5000,  
-            "windowtime": 0,  
-            "decimal": 4,
-            "unit": "g",
-            "Category": "Planetary",
-            "additionalinfo":
-            {
-                "baseid": "C4071A20-A5FD-4123-B79A-6EB47D6EEFA9"
-            }
-        },
-        {
-            "name": "1x to 5x Sheave - Velocity (e.g. imbalance, alignment error, structural problems)",
-            "refreshrate": 0,
-            "interval":  5000,  
-            "windowtime": 0,  
-            "decimal": 4,
-            "unit": "mm/s",
-            "Category": "Planetary",
-            "additionalinfo":
-            {
-                "baseid": "234B4068-F20E-4053-B316-0A1509AFB085"
+                "baseid": "40E32F4D-599E-4ACB-B959-94ECABD77DE7"
             }
         }
 
