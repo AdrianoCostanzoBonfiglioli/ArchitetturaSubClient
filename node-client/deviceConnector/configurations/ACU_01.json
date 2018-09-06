@@ -1,0 +1,204 @@
+{
+    "interfacesinfo": 
+    [    
+        { 
+            "name": "disk01",
+            "info":
+            {
+                "protocol": "FILE",
+                "path": "./disk/testACU",
+                "port": "xxx",
+                "user": "admin",
+                "password": "admin123"
+            }
+        },
+        {
+            "name": "wsXX_TestInverter",
+            "info":
+            {
+                "protocol": "WS",
+                "host": "127.0.0.1",
+                "port": "1111",
+                "user": "admin",
+                "password": "pass"
+            }
+        }
+    ],
+
+    "deviceinfo": 
+    {
+            "deviceid": "01MotorBreak",
+            "groupdeviceid": 1,
+            "protocol":
+            {
+                "name": "MODBUS",
+                "host": "10.1.71.25",
+                "port": "502",
+                "type": "ACU",
+                "user": "admin",
+                "password": "admin123",
+                "interval":  30000
+            }
+    },
+
+    "parameters": 
+    [    
+        { 
+            "name": "MotorCurrentRMS",
+            "refreshrate": 0,
+            "interval":  10000,  
+            "windowtime": 0,  
+            "decimal": 1,
+            "unit": "A",
+            "category": "MotorValues",
+            "additionalinfo":
+            {
+                "parameter": 211,
+                "bit": 16,
+                "dataset": 0
+            }
+        },
+        { 
+            "name": "MotorActivePower",
+            "refreshrate": 0,
+            "interval":  10000,  
+            "windowtime": 0,  
+            "decimal": 1,
+            "unit": "kW",
+            "category": "MotorValues",
+            "additionalinfo":
+            {
+                "parameter": 213,
+                "bit": 16,
+                "dataset": 0
+            }
+        },
+        { 
+            "name": "MotorTorque",
+            "refreshrate": 0,
+            "interval":  10000,  
+            "windowtime": 0,  
+            "decimal": 1,
+            "unit": "Nm",
+            "category": "MotorValues",
+            "additionalinfo":
+            {
+                "parameter": 224,
+                "bit": 32,
+                "dataset": 0
+            }
+        },
+        { 
+            "name": "MotorActualSpeed",
+            "refreshrate": 0,
+            "interval":  10000,  
+            "windowtime": 0,  
+            "decimal": 0,
+            "unit": "1/min",
+            "category": "MotorValues",
+            "additionalinfo":
+            {
+                "parameter": 240,
+                "bit": 32,
+                "dataset": 0
+            }
+        },
+        { 
+            "name": "MotorActiveCurrent",
+            "refreshrate": 0,
+            "interval":  10000,  
+            "windowtime": 0,  
+            "decimal": 1,
+            "unit": "A",
+            "category": "MotorValues",
+            "additionalinfo":
+            {
+                "parameter": 214,
+                "bit": 16,
+                "dataset": 0
+            }
+        },
+        { 
+            "name": "MotorOutputVoltage",
+            "refreshrate": 0,
+            "interval":  10000,  
+            "windowtime": 0,  
+            "decimal": 1,
+            "unit": "V",
+            "category": "MotorValues",
+            "additionalinfo":
+            {
+                "parameter": 212,
+                "bit": 16,
+                "dataset": 0
+            }
+        },
+        { 
+            "name": "MotorActualFrequency",
+            "refreshrate": 0,
+            "interval":  10000,  
+            "windowtime": 0,  
+            "decimal": 2,
+            "unit": "Hz",
+            "category": "MotorValues",
+            "additionalinfo":
+            {
+                "parameter": 241,
+                "bit": 32,
+                "dataset": 0
+            }
+        },
+        { 
+            "name": "DriveInternalTemperature",
+            "refreshrate": 0,
+            "interval":  10000,  
+            "windowtime": 0,  
+            "decimal": 1,
+            "unit": "Celsius",
+            "category": "InverterData",
+            "additionalinfo":
+            {
+                "parameter": 256,
+                "bit": 16,
+                "dataset": 0
+            }
+        },
+        { 
+            "name": "DriveWorkingHours",
+            "refreshrate": 0,
+            "interval":  10000,  
+            "windowtime": 0,  
+            "decimal": 0,
+            "unit": "h",
+            "category": "InverterData",
+            "additionalinfo":
+            {
+                "parameter": 245,
+                "bit": 32,
+                "dataset": 0
+            }
+        },
+        { 
+            "name": "FixedFrequency",
+            "refreshrate": 0,
+            "interval":  10000,  
+            "windowtime": 0,  
+            "decimal": 2,
+            "unit": "Hz",
+            "category": "InverterData",
+            "additionalinfo":
+            {
+                "parameter": 480,
+                "bit": 32,
+                "dataset": 0
+            }
+        }   
+    ],
+
+    "comments":
+    {
+        "refreshrate":  "frequenza di acquisizione (ms), se è 0 allora windowtime viene ignorato e prende solo il valore istantaneo",
+        "interval":     "tempo che trascorre tra le acquisizioni (ms)",
+        "windowtime":   "durata finestra di acquisizione (ms)"
+    }
+}

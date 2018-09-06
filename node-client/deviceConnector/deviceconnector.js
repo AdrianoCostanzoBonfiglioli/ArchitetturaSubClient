@@ -6,6 +6,130 @@ var DeviceConnector = function (config)
     InstanceSelect(globalconfig.deviceinfo.protocol.name);
 }
 
+var ModbusDeviceConnector = function(config)
+{
+    console.log(globalconfig.deviceinfo.deviceid + ": Start ModBus connector"); 
+
+    var type = globalconfig.deviceinfo.protocol.type; // Inverter bonfiglioli
+    var host = globalconfig.deviceinfo.protocol.host;
+    var port = globalconfig.deviceinfo.protocol.port;
+
+    switch(type) 
+        {
+            case "ACU":
+                ACUTaskClientCreate(host, port);
+            break;
+
+            default:
+            break;
+        }
+}
+
+ACUTaskClientCreate = function(host, port)
+{
+
+    for (let i = 0; i < globalconfig.parameters.length; i++)
+    {   
+        const spawn = require('threads').spawn;
+
+        const thread = spawn(function(input, done) {
+            done('Awesome thread script may run in browser and node.js!');
+        });
+
+        thread
+        .send({ do: ModTask(i, host, port)})
+        // The handlers come here: (none of them is mandatory)
+        .on('error', function(error) {
+            console.error('Worker errored:', error);
+        })
+        .on('exit', function() {
+            console.log('Worker has been terminated.');
+        });
+    }
+}
+
+var ilk = 0;
+
+ModTask = function(i, host, port)
+{
+
+    var options = {
+      'host': host,
+      'port': port,
+      'unitId': 1,
+      'logEnabled': false,
+      'logLevel': 'debug',
+    }
+ 
+    var modbus = require('jsmodbus')
+    var net = require('net')
+
+    socket = new net.Socket()
+    client = new modbus.client.TCP(socket)
+
+    socket.on('connect', function () 
+    { //handle
+
+        var name = globalconfig.parameters[ilk].name;
+        var interval = globalconfig.parameters[ilk].interval;
+        var decimal = globalconfig.parameters[ilk].decimal;
+        var unit = globalconfig.parameters[ilk].unit;
+        var category = globalconfig.parameters[ilk].category;
+    
+        var parameter = globalconfig.parameters[ilk].additionalinfo.parameter;
+        var bit = globalconfig.parameters[ilk].additionalinfo.bit;
+        var dataset = globalconfig.parameters[ilk].additionalinfo.dataset;
+
+        console.log("");
+        console.log("Name: " + name);
+        console.log("Param: " + parameter);
+
+        var angRegistry = parseInt(intToBin(dataset) + "000000000000", 2) + parameter;
+        console.log("Register: " + angRegistry);
+
+        client.readHoldingRegisters(angRegistry, bit/16)
+        .then(function (resp) 
+        {
+
+            let time = new Date().toISOString(); // formato UTC
+
+            var value = angConversion(resp.response._body._valuesAsArray, decimal);
+
+            //console.log(JSON.stringify(resp));
+            //console.log(value);
+
+            MODBUSCreateJSON(value, time, unit, category, name);
+
+            socket.end()
+        }).catch(function () 
+        {
+            console.error(require('util').inspect(arguments, {
+            depth: null }))
+
+            socket.end()
+        });
+
+
+        ilk = ilk + 1;
+        if (ilk >=  globalconfig.parameters.length){
+            ilk = 0;
+        }
+    })
+
+    socket.on('error', console.error) //handle
+
+    new Promise(function(resolve, reject) {
+        setInterval(function() 
+        {
+            socket.connect(options)
+        }, globalconfig.parameters[i].interval + 50 * i ); //put interval !!
+        }).then(function(){
+        console.log('done');
+    });
+
+}
+
+
 
 var SoapDeviceConnector = function (config)
 {
@@ -21,10 +145,10 @@ var SoapDeviceConnector = function (config)
     var request = {'smc:UserId': user, 'smc:Password': password}; 
     var options = {envelopeKey: 'soapenv', forceSoap12Headers: true}; 
 
-    TaskClientCreate(request, wsdl, options, endpoint);
+    SOAPTaskClientCreate(request, wsdl, options, endpoint);
 }
 
-var TaskClientCreate = function(request ,wsdl, options, endpoint)
+var SOAPTaskClientCreate = function(request ,wsdl, options, endpoint)
 {
     var soap = require('soap');
     const interval = globalconfig.deviceinfo.protocol.interval;
@@ -101,7 +225,7 @@ var MatchConfToServiceAndJSON = function (pkt)
         {
             if (globalconfig.parameters[i].additionalinfo.baseid === arrayIndex[j].BaseId) 
             {
-                CreateJSON(globalconfig.parameters[i], arrayIndex[j], pkt);
+                SOAPCreateJSON(globalconfig.parameters[i], arrayIndex[j], pkt);
                 console.log(globalconfig.deviceinfo.deviceid + ": PKT JSON Created !");
                 NoEntry = 1;
             } 
@@ -112,13 +236,36 @@ var MatchConfToServiceAndJSON = function (pkt)
         console.log(globalconfig.deviceinfo.deviceid + ": No Match between JSON and SOAP PKT, check correct baseID parameters");
 }
 
-var CreateJSON = function (ParamConfig, Index, Pkt) 
+
+var MODBUSCreateJSON = function (Value, Time, Unit, Category, Name) 
+{
+
+    var TimeReq = Date.now();
+
+    // formato dati ready to the cloud
+    // THIS IS SO IMPORTANT - DATA MODEL !
+    let data = {
+        value: Value,
+        name: Name,
+        deviceid: globalconfig.deviceinfo.deviceid,
+        groupdeviceid: globalconfig.deviceinfo.groupdeviceid,
+        category: Category,
+        unit: Unit,
+        timestamp: Time,
+        timerequest: TimeReq, // opz
+    }
+    
+    SendJSONData(data);
+}
+
+
+var SOAPCreateJSON = function (ParamConfig, Index, Pkt) 
 {
 
     var Value = Pkt.MeasurementJobStatus[Index.j].CharacteristicValueStatus[Index.i].CurrentValue;
     var OriginUnit = Pkt.MeasurementJobStatus[Index.j].CharacteristicValueStatus[Index.i].Unit;
     var Timestamp = Pkt.MeasurementJobStatus[Index.j].CharacteristicValueStatus[Index.i].LastMeasurementTime;
-    var Time = Date.now();
+    var TimeReq = Date.now();
 
     Value = UnitConvert(ParamConfig.unit, OriginUnit, Value ); // controlla se l'unità di misura è uguale, altrimenti converte. può fare anche altri aggiustamenti vari
     Value = Approx(ParamConfig.decimal, Value );
@@ -128,11 +275,12 @@ var CreateJSON = function (ParamConfig, Index, Pkt)
     let data = {
         deviceid: globalconfig.deviceinfo.deviceid,
         groupdeviceid: globalconfig.deviceinfo.groupdeviceid,
+        category: ParamConfig.category,
         name: ParamConfig.name,
         unit: ParamConfig.unit,
         timestamp: Timestamp,
         value: Value,
-        timerequest: Time, // opz
+        timerequest: TimeReq, // opz
     }
     
     SendJSONData(data);
@@ -196,7 +344,7 @@ var FILEInstance = function(data, config)
     const fs = require('fs');
     const content = JSON.stringify(data);
     
-    fs.appendFileSync(config.info.path, content, 'utf8', function (err) {
+    fs.appendFileSync(config.info.path, content + "\n", 'utf8', function (err) {
         if (err) {
             return console.log(err);
         }
@@ -214,12 +362,15 @@ var InstanceSelect = function (protocolname)
             SoapDeviceConnector(globalconfig);
             break;
 
-        case "MODBUS_INVERTER":
-            SoapDeviceConnector(globalconfig); // ModbusDeviceConnector(globalconfig, type); // Inverter type
+        case "MODBUS":
+            ModbusDeviceConnector(globalconfig);
             break;
     }
 
 } 
+
+
+// TOOLS
 
 var Approx = function (num, value) 
 {
@@ -232,5 +383,53 @@ var UnitConvert = function (dest, origin, value)
 {
     return value;
 }
+
+var intToBin = function(dec){
+    return (dec >>> 0).toString(2);
+}
+
+var signConversion = function(value,bit) {
+    var result = value;
+    var maxSignedNum = Math.pow(2, bit-1)-1;
+    if (value > maxSignedNum) result = value - Math.pow(2, bit);
+    return result;
+}
+
+var angConversion = function(valuesAsArray,decimal) 
+{
+    var result = valuesAsArray[0];
+    var bit = 16;
+    var signed = false;
+
+    if (decimal > 0)
+        signed = true;
+
+    if (valuesAsArray.length===2){
+        result = (((valuesAsArray[0] & 0xffff) << 16) | (valuesAsArray[1] & 0xffff));  
+        bit = 32;
+    }
+    if (signed){
+        result = signConversion(result,bit);
+    }
+    
+    result = decimalConversion(result,decimal);
+    return result.toFixed(decimal);
+}
+
+var decimalConversion = function(value, decimal) {
+	var	conversionFactor = 1;
+	if (decimal > 0){
+		conversionFactor = Math.pow(10, decimal);
+	}
+	return (value/conversionFactor);
+}
+var valueConversion = function(value, type) {
+	var iValue = value;
+	if (type==="boolean"){
+		iValue = !!value;
+	}
+	return iValue;
+}
+
 
 module.exports = DeviceConnector;

@@ -1,4 +1,3 @@
-'use strict'
 var path = require('path');
 var scriptName = path.basename(__filename);
 
