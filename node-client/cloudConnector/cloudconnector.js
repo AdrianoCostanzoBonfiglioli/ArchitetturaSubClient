@@ -94,9 +94,10 @@ var CloudSideInstance = function (infocloud, datatosend)
 var UbidotsConnectSettings = function(infocloud, datatosend)
 {
 
-    switch(infocloud.protocol.name) 
+    switch(infocloud.protocol.type) 
     {
         case "MQTT":
+        {
 
             var mqtt = require("mqtt");
 
@@ -123,7 +124,70 @@ var UbidotsConnectSettings = function(infocloud, datatosend)
             console.log("Send PKT to the Cloud");
 
         break;
+        }
 
+        case "RESTAPI":
+        {
+
+        var Client = require('node-rest-client').Client;
+        var client = new Client();
+
+        // Info Host / Token
+        var token = infocloud.protocol.token; 
+        var host = infocloud.protocol.host; 
+        var apiversion = infocloud.protocol.apiversion; 
+
+        // Label
+        var parametername = datatosend.name;
+        var deviceid = datatosend.deviceid;
+
+        // Value
+        var value = datatosend.value;
+
+        var timestampUTC = datatosend.timestamp;
+        var timestampInteger = Date.parse(timestampUTC);
+
+        // Context
+        var groupdeviceid = datatosend.deviceid;
+        var category = datatosend.category;
+        var unit = datatosend.unit;
+
+        var request = "http://"+ host +"/api/"+ apiversion +"/devices/"+ deviceid +"/" + parametername + "/values?token=" + token;
+
+        console.log(request);
+
+        //Ubidots JSON Format
+        var dataready = { 
+            "value" : value,
+            "context" : { "groupdeviceid" : groupdeviceid, "category" : category, "unit": unit},
+            "timestamp": timestampInteger,
+        }
+
+        console.log(dataready);
+
+        var args = {
+            data: dataready,
+            headers: { "Content-Type": "application/json" }
+        };
+        
+        // registering remote methods
+        client.registerMethod("postMethod", request, "POST");
+        
+        client.methods.postMethod(args, function (data, response) {
+            // parsed response body as js object
+            console.log(data);
+            // raw response
+            //console.log(response);
+        });
+
+        console.log("Send PKT to the Cloud");
+
+        break;
+        }
+
+
+        default:
+        break;
     }
     
 }

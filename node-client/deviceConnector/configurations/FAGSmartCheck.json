@@ -44,7 +44,7 @@
     "parameters": 
     [    
         { 
-            "name": "Wellhausen counter - Acceleration (Anomalies)",
+            "name": "WellhausenCounter-Acceleration_anomalies",
             "refreshrate": 0,
             "interval":  5000,  
             "windowtime": 0,  
@@ -57,7 +57,7 @@
             }
         },
         { 
-            "name": "Peak2peak - Acceleration (High vibration values)",
+            "name": "Peak2Peak-Acceleration_highvibration",
             "refreshrate": 0,
             "interval":  5000,  
             "windowtime": 0,  
@@ -70,7 +70,7 @@
             }
         },
         { 
-            "name": "RMS broad band - Acceleration (Overall status)",
+            "name": "RMSbroadband-Acceleration_overall",
             "refreshrate": 0,
             "interval":  5000,  
             "windowtime": 0,  
@@ -83,7 +83,7 @@
             }
         },
         { 
-            "name": "RMS broad band - Demodulation (Overall status)",
+            "name": "RMSbroadband-Demodulation_overall",
             "refreshrate": 0,
             "interval":  5000,  
             "windowtime": 0,  
@@ -96,7 +96,7 @@
             }
         },
         { 
-            "name": "Periodic value - Demodulation (recurring anomalies)",
+            "name": "PeriodicValue-Demodulation_recurring_anomalies",
             "refreshrate": 0,
             "interval":  5000,  
             "windowtime": 0,  
@@ -109,7 +109,7 @@
             }
         },
         { 
-            "name": "ISO10816-1 (10Hz - 1kHz) - Velocity",
+            "name": "ISO10816-1_10Hz-1kHz_Velocity",
             "refreshrate": 0,
             "interval":  5000,  
             "windowtime": 0,  
@@ -135,7 +135,7 @@
             }
         },
         { 
-            "name": "Periodic value - Acceleration (recurring anomalies)",
+            "name": "PeriodicValue-Acceleration_recurring_anomalies",
             "refreshrate": 0,
             "interval":  5000,  
             "windowtime": 0,  
@@ -148,7 +148,7 @@
             }
         },
         { 
-            "name": "Crest factor - Acceleration (Impulses)",
+            "name": "CrestFactor-Acceleration_impulses",
             "refreshrate": 0,
             "interval":  5000,  
             "windowtime": 0,  
@@ -161,7 +161,7 @@
             }
         },
         {
-            "name": "Torque Meter",
+            "name": "TorqueMeter",
             "refreshrate": 0,
             "interval":  5000,  
             "windowtime": 0,  

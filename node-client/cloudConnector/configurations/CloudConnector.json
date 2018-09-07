@@ -4,11 +4,10 @@
             "name": "Ubidots01",
             "protocol":
             {
-                "name": "MQTT",
-                "host": "mqtt://things.ubidots.com",
-                "token": "BBFF-Fr0xS9WndPUmm5qkoXMXtkaPQTLelZ",
-                "qos": 1,
-                "retain": "false"
+                "type": "RESTAPI",
+                "host": "things.ubidots.com",
+                "token": "BBFF-42n4eJAyj1fQQeGtgo57vnuxUKlf9D",
+                "apiversion": "v1.6"
             }
     }],
 
@@ -23,3 +22,4 @@
             }
     }
 }
+

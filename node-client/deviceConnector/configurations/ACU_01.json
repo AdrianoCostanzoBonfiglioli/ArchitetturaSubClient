@@ -27,7 +27,7 @@
 
     "deviceinfo": 
     {
-            "deviceid": "01MotorBreak",
+            "deviceid": "01MotorActive",
             "groupdeviceid": 1,
             "protocol":
             {
