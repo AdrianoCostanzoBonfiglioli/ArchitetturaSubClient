@@ -8,50 +8,11 @@ var DeviceConnector = function (config)
 
 var ModbusDeviceConnector = function(config)
 {
-    console.log(globalconfig.deviceinfo.deviceid + ": Start ModBus connector"); 
+    console.log(config.deviceinfo.deviceid + ": Start ModBus connector"); 
 
-    var type = globalconfig.deviceinfo.protocol.type; // Inverter bonfiglioli
-    var host = globalconfig.deviceinfo.protocol.host;
-    var port = globalconfig.deviceinfo.protocol.port;
-
-    switch(type) 
-        {
-            case "ACU":
-                ACUTaskClientCreate(host, port);
-            break;
-
-            default:
-            break;
-        }
-}
-
-ACUTaskClientCreate = function(host, port)
-{
-
-    for (let i = 0; i < globalconfig.parameters.length; i++)
-    {   
-        const spawn = require('threads').spawn;
-
-        const thread = spawn(function(input, done) {
-            done('Awesome thread script may run in browser and node.js!');
-        });
-
-        thread
-        .send({ do: ModTask(i, host, port)})
-        // The handlers come here: (none of them is mandatory)
-        .on('error', function(error) {
-            console.error('Worker errored:', error);
-        })
-        .on('exit', function() {
-            console.log('Worker has been terminated.');
-        });
-    }
-}
-
-var ilk = 0;
-
-ModTask = function(i, host, port)
-{
+    var type = config.deviceinfo.protocol.type; 
+    var host = config.deviceinfo.protocol.host;
+    var port = config.deviceinfo.protocol.port;
 
     var options = {
       'host': host,
@@ -60,75 +21,106 @@ ModTask = function(i, host, port)
       'logEnabled': false,
       'logLevel': 'debug',
     }
- 
+
     var modbus = require('jsmodbus')
     var net = require('net')
+    var socket = new net.Socket()
+    var client = new modbus.client.TCP(socket)
 
-    socket = new net.Socket()
-    client = new modbus.client.TCP(socket)
-
+    // manage the connection
     socket.on('connect', function () 
-    { //handle
-
-        var name = globalconfig.parameters[ilk].name;
-        var interval = globalconfig.parameters[ilk].interval;
-        var decimal = globalconfig.parameters[ilk].decimal;
-        var unit = globalconfig.parameters[ilk].unit;
-        var category = globalconfig.parameters[ilk].category;
-    
-        var parameter = globalconfig.parameters[ilk].additionalinfo.parameter;
-        var bit = globalconfig.parameters[ilk].additionalinfo.bit;
-        var dataset = globalconfig.parameters[ilk].additionalinfo.dataset;
-
-        console.log("");
-        console.log("Name: " + name);
-        console.log("Param: " + parameter);
-
-        var angRegistry = parseInt(intToBin(dataset) + "000000000000", 2) + parameter;
-        console.log("Register: " + angRegistry);
-
-        client.readHoldingRegisters(angRegistry, bit/16)
-        .then(function (resp) 
+    { 
+        //depending on the device type, I will instantiate a different task 
+        switch(type) 
         {
+            case "ACU": // Inverter bonfiglioli
+                ACUTaskClientCreate(config,client); 
+            break;
 
-            let time = new Date().toISOString(); // formato UTC
-
-            var value = angConversion(resp.response._body._valuesAsArray, decimal);
-
-            //console.log(JSON.stringify(resp));
-            //console.log(value);
-
-            MODBUSCreateJSON(value, time, unit, category, name);
-
-            socket.end()
-        }).catch(function () 
-        {
-            console.error(require('util').inspect(arguments, {
-            depth: null }))
-
-            socket.end()
-        });
-
-
-        ilk = ilk + 1;
-        if (ilk >=  globalconfig.parameters.length){
-            ilk = 0;
+            default:
+            break;
         }
-    })
-
-    socket.on('error', console.error) //handle
-
-    new Promise(function(resolve, reject) {
-        setInterval(function() 
-        {
-            socket.connect(options)
-        }, globalconfig.parameters[i].interval + 50 * i ); //put interval !!
-        }).then(function(){
-        console.log('done');
+       
     });
 
+    socket.on('error', console.error) //handle
+    socket.connect(options)
+    
+    //override exit handler
+    process.stdin.resume();//so the program will not close instantly
+    function exitHandler(options, exitCode) {
+        socket.end();
+        if (options.cleanup) console.log('clean');
+        if (exitCode || exitCode === 0) console.log(exitCode);
+        if (options.exit) process.exit();
+    }
+
+    //do something when app is closing
+    process.on('exit', exitHandler.bind(null,{cleanup:true}));
+    //catches ctrl+c event
+    process.on('SIGINT', exitHandler.bind(null, {exit:true}));
+    // catches "kill pid" (for example: nodemon restart)
+    process.on('SIGUSR1', exitHandler.bind(null, {exit:true}));
+    process.on('SIGUSR2', exitHandler.bind(null, {exit:true}));
+    //catches uncaught exceptions
+    process.on('uncaughtException', exitHandler.bind(null, {exit:true}));
 }
 
+ACUTaskClientCreate = function(config,client)
+{
+    //legge il parametro via modbus seguendo le informazioni in input
+    var modbusCall = function(parameterInfo){
+        return new Promise(function(resolve, reject){
+            
+            var decimal = parameterInfo.decimal;
+            var parameter = parameterInfo.additionalinfo.parameter;
+            var bit = parameterInfo.additionalinfo.bit;
+            var dataset = parameterInfo.additionalinfo.dataset;
+
+            var angRegistry = parseInt(intToBin(dataset) + "000000000000", 2) + parameter;
+            //console.log("Register: " + angRegistry);
+
+            client.readHoldingRegisters(angRegistry, bit/16)
+            .then(function (resp) 
+            {
+                //console.log(JSON.stringify(resp));
+                var convertedResult = angConversion(resp.response._body._valuesAsArray, decimal);
+                resolve(convertedResult); // link to modbusCall(parameterInfo).then -> function(result){ // lo ritrovi dentro result
+            }).catch(function () 
+            {
+                reject(require('util').inspect(arguments, { depth: null }))
+                // link to modbusCall(parameterInfo).then -> function(err){{ // lo ritrovi dentro err
+            });
+            
+        });
+    };
+
+    //scorre tutti i parametri e per ogni parametro richiama la modbusCall ripetutamente in base al relativo intervallo
+    config.parameters.forEach(function(parameterInfo) {
+        var loopId = setInterval( function() {
+            modbusCall(parameterInfo).then(
+                //resolved
+                function(result){
+
+                    var value = result;
+                    var name = parameterInfo.name;
+                    var unit = parameterInfo.unit;
+                    var category = parameterInfo.category;
+                    let time = new Date().toISOString(); // formato 
+
+                    MODBUSCreateJSON(value, time, unit, category, name);
+                    console.log("Loop ACUTaskClientCreate: for parameter <"+ parameterInfo.additionalinfo.parameter +"> this is the resolved value <"+result+parameterInfo.unit+">");
+                },
+                //rejected
+                function(err){
+                    console.log("ERROR ACUTaskClientCreate for parameter <"+ parameterInfo.additionalinfo.parameter +"> this is the error <"+err+">");
+                    //exit from setInterval
+                    clearInterval(loopId); // kill to SetInterval
+                }
+            )}, parameterInfo.interval // intervallo della SetInterval
+        ); 
+    });
+}
 
 
 var SoapDeviceConnector = function (config)

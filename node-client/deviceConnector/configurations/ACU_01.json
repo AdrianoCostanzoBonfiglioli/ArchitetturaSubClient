@@ -32,7 +32,7 @@
             "protocol":
             {
                 "name": "MODBUS",
-                "host": "10.1.71.25",
+                "host": "10.1.71.26",
                 "port": "502",
                 "type": "ACU",
                 "user": "admin",
