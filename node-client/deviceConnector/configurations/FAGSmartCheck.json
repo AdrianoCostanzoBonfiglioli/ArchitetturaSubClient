@@ -13,7 +13,7 @@
             }
         },
         {
-            "name": "wsXX_TestFAG",
+            "name": "wsCloud_TestFAG",
             "info":
             {
                 "protocol": "WS",
@@ -22,7 +22,18 @@
                 "user": "admin",
                 "password": "pass"
             }
-        }
+        },
+        {
+            "name": "wsPP_TestFAG",
+            "info":
+            {
+                "protocol": "WS",
+                "host": "127.0.0.1",
+                "port": "1112",
+                "user": "admin",
+                "password": "pass"
+            }
+    }
     ],
 
     "deviceinfo": 

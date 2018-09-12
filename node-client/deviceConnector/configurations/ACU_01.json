@@ -13,12 +13,23 @@
             }
         },
         {
-            "name": "wsXX_TestInverter",
+            "name": "wsCloud_TestInverter",
             "info":
             {
                 "protocol": "WS",
                 "host": "127.0.0.1",
                 "port": "1111",
+                "user": "admin",
+                "password": "pass"
+            }
+        },
+        {
+            "name": "wsPP_TestInverter",
+            "info":
+            {
+                "protocol": "WS",
+                "host": "127.0.0.1",
+                "port": "1112",
                 "user": "admin",
                 "password": "pass"
             }

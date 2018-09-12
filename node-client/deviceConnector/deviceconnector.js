@@ -106,9 +106,10 @@ ACUTaskClientCreate = function(config,client)
                     var name = parameterInfo.name;
                     var unit = parameterInfo.unit;
                     var category = parameterInfo.category;
-                    let time = new Date().toISOString(); // formato 
+                    var timeDATE = new Date();
+                    var timeINT = Date.now();
 
-                    MODBUSCreateJSON(value, time, unit, category, name);
+                    MODBUSCreateJSON(value, timeDATE, timeINT, unit, category, name);
                     console.log("Loop ACUTaskClientCreate: for parameter <"+ parameterInfo.additionalinfo.parameter +"> this is the resolved value <"+result+parameterInfo.unit+">");
                 },
                 //rejected
@@ -229,10 +230,10 @@ var MatchConfToServiceAndJSON = function (pkt)
 }
 
 
-var MODBUSCreateJSON = function (Value, Time, Unit, Category, Name) 
+var MODBUSCreateJSON = function (Value, TimeDATE, TimeINT, Unit, Category, Name) 
 {
 
-    var TimeReq = Date.now();
+    Timestamp = TimeDATE.toISOString();
 
     // formato dati ready to the cloud
     // THIS IS SO IMPORTANT - DATA MODEL !
@@ -243,8 +244,8 @@ var MODBUSCreateJSON = function (Value, Time, Unit, Category, Name)
         groupdeviceid: globalconfig.deviceinfo.groupdeviceid,
         category: Category,
         unit: Unit,
-        timestamp: Time,
-        timerequest: TimeReq, // opz
+        timestamp: Timestamp,
+        timestampINT: TimeINT 
     }
     
     SendJSONData(data);
@@ -256,8 +257,12 @@ var SOAPCreateJSON = function (ParamConfig, Index, Pkt)
 
     var Value = Pkt.MeasurementJobStatus[Index.j].CharacteristicValueStatus[Index.i].CurrentValue;
     var OriginUnit = Pkt.MeasurementJobStatus[Index.j].CharacteristicValueStatus[Index.i].Unit;
-    var Timestamp = Pkt.MeasurementJobStatus[Index.j].CharacteristicValueStatus[Index.i].LastMeasurementTime;
-    var TimeReq = Date.now();
+
+    // non è significativo, i tempi di acq. sono molto lenti
+    //var Timestamp = Pkt.MeasurementJobStatus[Index.j].CharacteristicValueStatus[Index.i].LastMeasurementTime;
+
+    var timeDATE = new Date();
+    var timeINT = Date.now();
 
     Value = UnitConvert(ParamConfig.unit, OriginUnit, Value ); // controlla se l'unità di misura è uguale, altrimenti converte. può fare anche altri aggiustamenti vari
     Value = Approx(ParamConfig.decimal, Value );
@@ -270,9 +275,9 @@ var SOAPCreateJSON = function (ParamConfig, Index, Pkt)
         category: ParamConfig.category,
         name: ParamConfig.name,
         unit: ParamConfig.unit,
-        timestamp: Timestamp,
         value: Value,
-        timerequest: TimeReq, // opz
+        timestamp: timeDATE,
+        timestampINT: timeINT 
     }
     
     SendJSONData(data);

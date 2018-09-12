@@ -1,0 +1,29 @@
+{
+    "localside": 
+    {
+            "interface":
+            {
+                "name": "WebSocket",
+                "host": "localhost",
+                "port": "1112"
+            }
+    },
+
+    "submodule":
+    [{
+        "name": "PushRAWdata",
+        "type": "pushers",
+        "dbinfo":
+        {
+            "schemaname": "RAWdataInflux01",
+            "host": "127.0.0.1",
+            "port": "8083",
+            "version": "xxx"
+        },
+        "instructions": 
+        {
+
+        }
+    }]
+
+}
