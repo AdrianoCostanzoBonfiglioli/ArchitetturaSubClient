@@ -110,7 +110,7 @@ ACUTaskClientCreate = function(config,client)
                     var timeINT = Date.now();
 
                     MODBUSCreateJSON(value, timeDATE, timeINT, unit, category, name);
-                    console.log("Loop ACUTaskClientCreate: for parameter <"+ parameterInfo.additionalinfo.parameter +"> this is the resolved value <"+result+parameterInfo.unit+">");
+                    console.log("Loop ACUTaskClientCreate: for parameter <"+ parameterInfo.additionalinfo.parameter +"> this is the resolved value: <"+result+parameterInfo.unit+">");
                 },
                 //rejected
                 function(err){
@@ -279,7 +279,9 @@ var SOAPCreateJSON = function (ParamConfig, Index, Pkt)
         timestamp: timeDATE,
         timestampINT: timeINT 
     }
-    
+
+    console.log("Loop SOAPTaskClient: for parameter: "+ data.name +" this is the resolved value: "+ data.value);
+
     SendJSONData(data);
 }
 

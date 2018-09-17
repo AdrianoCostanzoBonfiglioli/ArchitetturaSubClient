@@ -90,6 +90,18 @@ var CloudSideInstance = function (infocloud, datatosend)
     }
 }
 
+/* Data Model Schema Reference !
+    let data = {
+        deviceid: globalconfig.deviceinfo.deviceid,
+        groupdeviceid: globalconfig.deviceinfo.groupdeviceid,
+        category: ParamConfig.category,
+        name: ParamConfig.name,
+        unit: ParamConfig.unit,
+        value: Value,
+        timestamp: timeDATE,
+        timestampINT: timeINT 
+    }
+*/
 
 var UbidotsConnectSettings = function(infocloud, datatosend)
 {
@@ -139,15 +151,13 @@ var UbidotsConnectSettings = function(infocloud, datatosend)
 
         // Label
         var parametername = datatosend.name;
-        var deviceid = datatosend.deviceid;
 
         // Value
         var value = datatosend.value;
-
-        var timestampUTC = datatosend.timestamp;
-        var timestampInteger = Date.parse(timestampUTC);
+        var timestampInteger = datatosend.timestampINT;
 
         // Context
+        var deviceid = datatosend.deviceid;
         var groupdeviceid = datatosend.deviceid;
         var category = datatosend.category;
         var unit = datatosend.unit;
@@ -159,7 +169,7 @@ var UbidotsConnectSettings = function(infocloud, datatosend)
         //Ubidots JSON Format
         var dataready = { 
             "value" : value,
-            "context" : { "groupdeviceid" : groupdeviceid, "category" : category, "unit": unit},
+            "context" : { "deviceid" : deviceid, "groupdeviceid" : groupdeviceid, "category" : category, "unit": unit},
             "timestamp": timestampInteger,
         }
 
