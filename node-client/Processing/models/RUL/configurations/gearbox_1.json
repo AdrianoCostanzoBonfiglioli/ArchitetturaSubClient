@@ -1,0 +1,90 @@
+{
+    "id": 0,
+    "tMax": 100,
+    "numberOfClusters": 10,
+    "nominalHoursDuration": 10000,
+    "stages": [
+        {
+            "id": 0,
+            "shafts": [
+                {
+                    "id": 1,
+                    "components": [
+                        {
+                            "id": 1,
+                            "type": "bearings",
+                            "clusteringAlgorithmType": "LDD",
+                            "Sa": 100,
+                            "Sb": 10,
+                            "Na": 100,
+                            "Nb": 10,
+                            "Rt": 1,
+                            "r": 1,
+                            "p": 1,
+                            "k": 1
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "components": [
+                        {
+                            "id": 2,
+                            "type": "gears",
+                            "clusteringAlgorithmType": "LDD",
+                            "Sa": 100,
+                            "Sb": 10,
+                            "Na": 100,
+                            "Nb": 10,
+                            "Rt": 1,
+                            "r": 1,
+                            "p": 1,
+                            "k": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 0,
+            "shafts": [
+                {
+                    "id": 0,
+                    "components": [
+                        {
+                            "id": 0,
+                            "type": "gears",
+                            "clusteringAlgorithmType": "LDD",
+                            "Sa": 100,
+                            "Sb": 10,
+                            "Na": 100,
+                            "Nb": 10,
+                            "Rt": 1,
+                            "r": 1,
+                            "p": 1,
+                            "k": 1
+                        }
+                    ]
+                },
+                {
+                    "id": 0,
+                    "components": [
+                        {
+                            "id": 0,
+                            "type": "bearings",
+                            "clusteringAlgorithmType": "LDD",
+                            "Sa": 100,
+                            "Sb": 10,
+                            "Na": 100,
+                            "Nb": 10,
+                            "Rt": 1,
+                            "r": 1,
+                            "p": 1,
+                            "k": 1
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
