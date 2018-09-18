@@ -341,14 +341,22 @@ var WSInstance = function(data, config)
 var FILEInstance = function(data, config)
 {
     const fs = require('fs');
-    const content = JSON.stringify(data);
-    
-    fs.appendFileSync(config.info.path, content + "\n", 'utf8', function (err) {
+
+    contentFiltered = {
+        name: data.name,
+        value: data.value,
+        time: data.timeINT
+    }
+
+    const content = JSON.stringify(contentFiltered);
+
+    fs.appendFileSync(config.info.path, content + "\n", 'utf8', function (err)
+    {
         if (err) {
             return console.log(err);
         }
-    
-        console.log("The file was saved!");
+
+        console.log("The file was saved on Disk!");
     }); 
 
 }
