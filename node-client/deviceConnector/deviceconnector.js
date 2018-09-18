@@ -106,8 +106,14 @@ ACUTaskClientCreate = function(config,client)
                     var name = parameterInfo.name;
                     var unit = parameterInfo.unit;
                     var category = parameterInfo.category;
-                    var timeDATE = new Date();
-                    var timeINT = Date.now();
+
+                    var time = require('time');
+
+                    var now = new time.Date();
+                    now.setTimezone('Europe/Amsterdam');
+
+                    var timeDATE = now.toString();
+                    var timeINT = Date.parse(timeDATE);
 
                     MODBUSCreateJSON(value, timeDATE, timeINT, unit, category, name);
                     console.log("Loop ACUTaskClientCreate: for parameter <"+ parameterInfo.additionalinfo.parameter +"> this is the resolved value: <"+result+parameterInfo.unit+">");
@@ -232,9 +238,6 @@ var MatchConfToServiceAndJSON = function (pkt)
 
 var MODBUSCreateJSON = function (Value, TimeDATE, TimeINT, Unit, Category, Name) 
 {
-
-    Timestamp = TimeDATE.toISOString();
-
     // formato dati ready to the cloud
     // THIS IS SO IMPORTANT - DATA MODEL !
     let data = {
@@ -244,7 +247,7 @@ var MODBUSCreateJSON = function (Value, TimeDATE, TimeINT, Unit, Category, Name)
         groupdeviceid: globalconfig.deviceinfo.groupdeviceid,
         category: Category,
         unit: Unit,
-        timestamp: Timestamp,
+        timestamp: TimeDATE,
         timestampINT: TimeINT 
     }
     
@@ -261,8 +264,13 @@ var SOAPCreateJSON = function (ParamConfig, Index, Pkt)
     // non è significativo, i tempi di acq. sono molto lenti
     //var Timestamp = Pkt.MeasurementJobStatus[Index.j].CharacteristicValueStatus[Index.i].LastMeasurementTime;
 
-    var timeDATE = new Date();
-    var timeINT = Date.now();
+    var time = require('time');
+
+    var now = new time.Date();
+    now.setTimezone('Europe/Amsterdam');
+
+    var timeDATE = now.toString();
+    var timeINT = Date.parse(timeDATE);
 
     Value = UnitConvert(ParamConfig.unit, OriginUnit, Value ); // controlla se l'unità di misura è uguale, altrimenti converte. può fare anche altri aggiustamenti vari
     Value = Approx(ParamConfig.decimal, Value );
@@ -345,7 +353,7 @@ var FILEInstance = function(data, config)
     contentFiltered = {
         name: data.name,
         value: data.value,
-        time: data.timeINT
+        time: data.timestamp,
     }
 
     const content = JSON.stringify(contentFiltered);
@@ -355,7 +363,6 @@ var FILEInstance = function(data, config)
         if (err) {
             return console.log(err);
         }
-
         console.log("The file was saved on Disk!");
     }); 
 
@@ -437,6 +444,5 @@ var valueConversion = function(value, type) {
 	}
 	return iValue;
 }
-
 
 module.exports = DeviceConnector;
