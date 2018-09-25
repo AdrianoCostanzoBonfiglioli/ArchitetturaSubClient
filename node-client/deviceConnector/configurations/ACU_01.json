@@ -57,7 +57,7 @@
         { 
             "name": "MotorCurrentRMS",
             "refreshrate": 0,
-            "interval":  10000,  
+            "interval":  30000,  
             "windowtime": 0,  
             "decimal": 1,
             "unit": "A",
@@ -72,7 +72,7 @@
         { 
             "name": "MotorActivePower",
             "refreshrate": 0,
-            "interval":  10000,  
+            "interval":  30000,  
             "windowtime": 0,  
             "decimal": 1,
             "unit": "kW",
@@ -87,7 +87,7 @@
         { 
             "name": "MotorTorque",
             "refreshrate": 0,
-            "interval":  10000,  
+            "interval":  30000,  
             "windowtime": 0,  
             "decimal": 1,
             "unit": "Nm",
@@ -102,10 +102,10 @@
         { 
             "name": "MotorActualSpeed",
             "refreshrate": 0,
-            "interval":  10000,  
+            "interval":  30000,  
             "windowtime": 0,  
             "decimal": 0,
-            "unit": "1/min",
+            "unit": "rpm",
             "category": "MotorValues",
             "additionalinfo":
             {
@@ -117,7 +117,7 @@
         { 
             "name": "MotorActiveCurrent",
             "refreshrate": 0,
-            "interval":  10000,  
+            "interval":  30000,  
             "windowtime": 0,  
             "decimal": 1,
             "unit": "A",
@@ -132,7 +132,7 @@
         { 
             "name": "MotorOutputVoltage",
             "refreshrate": 0,
-            "interval":  10000,  
+            "interval":  30000,  
             "windowtime": 0,  
             "decimal": 1,
             "unit": "V",
@@ -147,7 +147,7 @@
         { 
             "name": "MotorActualFrequency",
             "refreshrate": 0,
-            "interval":  10000,  
+            "interval":  30000,  
             "windowtime": 0,  
             "decimal": 2,
             "unit": "Hz",
@@ -162,7 +162,7 @@
         { 
             "name": "DriveInternalTemperature",
             "refreshrate": 0,
-            "interval":  10000,  
+            "interval":  30000,  
             "windowtime": 0,  
             "decimal": 1,
             "unit": "Celsius",
@@ -177,7 +177,7 @@
         { 
             "name": "DriveWorkingHours",
             "refreshrate": 0,
-            "interval":  10000,  
+            "interval":  30000,  
             "windowtime": 0,  
             "decimal": 0,
             "unit": "h",
@@ -192,7 +192,7 @@
         { 
             "name": "FixedFrequency",
             "refreshrate": 0,
-            "interval":  10000,  
+            "interval":  30000,  
             "windowtime": 0,  
             "decimal": 2,
             "unit": "Hz",

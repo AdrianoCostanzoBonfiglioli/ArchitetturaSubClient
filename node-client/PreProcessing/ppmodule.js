@@ -1,14 +1,16 @@
 var globalconfig;
+var influx;
 
 const Influx = require('influx');
+const WebSocket = require('ws');
 
-exports.PushRAWData = function(ppconfig)
+exports.PushRAWData = function(config)
 {
-    globalconfig = ppconfig;
+    globalconfig = config;
     console.log("pushmodule...");
+
+    InfluxInstance(); 
     LocalSide(); // Server Instance
-
-
 };
 
 exports.PullRAWData = function(ppconfig)
@@ -16,9 +18,6 @@ exports.PullRAWData = function(ppconfig)
     globalconfig = ppconfig;
     console.log("pullmodule...");
 };
-
-
-
 
 
 var LocalSide = function () 
@@ -37,51 +36,35 @@ var LocalSide = function ()
 
 var WebSocketServer = function(_host, _port,)
 {
+    const wss = new WebSocket.Server({port: _port}, {host: _host});
+    console.log("WS: localside server is on");
 
-    var WebSocketServer = require('ws').Server,
-        wss = new WebSocketServer({port: _port}, {host: _host})
+    wss.on('connection', function connection(ws){
+        ws.on('message', function incoming(message) 
+        {
+            //create a JSON object
+            var jsonObject = JSON.parse(message);
+            console.log("PKT from: " + jsonObject.deviceid);
+            console.log("PKT label: " + jsonObject.name);
 
-        console.log("WS: localside server is on");
-
-        wss.on('connection', function connection(ws) {
-            ws.isAlive = true;
-            ws.on('pong', heartbeat);
-
-            ws.on('message', function incoming(message) 
-            {
-                //create a JSON object
-                var jsonObject = JSON.parse(message);
-                console.log("PKT from: " + jsonObject.deviceid);
-                console.log("PKT label: " + jsonObject.name);
-                console.log(`Roundtrip time: ${Date.now() - jsonObject.timestampINT} ms`);
-
-                // Now Send to Cloud !
-                PushDataOnDB(jsonObject);
-            });
-
-            // ACK 
-            try { ws.send(`${new Date()}`); }
-            catch (e) { console.log("Exception, Send Error"); }
+            // Now Send to Cloud !
+            PushDataOnDB(jsonObject);
         });
-
-    function noop() {}
-
-    function heartbeat() 
-    {
-        this.isAlive = true;
-    }
-
-    const interval = setInterval(function ping() {
-        wss.clients.forEach(function each(ws) {
-        if (ws.isAlive === false) return ws.terminate();
-        
-        ws.isAlive = false;
-        ws.ping(noop);
-        });
-    }, 30000);
-
+    });
 }
 
+var InfluxInstance= function()
+{
+    databaselabel = "RawDataDb01"
+
+    influx = new Influx.InfluxDB({
+        host: 'localhost',
+        database: databaselabel,
+        port: 8086,
+        username: 'root',
+        password: '',
+    })
+}
 
 var PushDataOnDB = function(jsonObject)
 {
@@ -89,7 +72,7 @@ var PushDataOnDB = function(jsonObject)
 
     databaselabel = "RawDataDb01"
 
-    value = jsonObject.value
+    value = Number(jsonObject.value)
     measurement = jsonObject.name
 
     tag_deviceid = jsonObject.deviceid
@@ -100,24 +83,6 @@ var PushDataOnDB = function(jsonObject)
     var timestamp = jsonObject.timestamp;
     var timestampINT = jsonObject.timestampINT;
 
-    const influx = new Influx.InfluxDB({
-    host: 'localhost',
-    database: databaselabel,
-    port: 8086,
-    username: 'root',
-    password: '',
-    schema: 
-    [{
-        measurement: measurement,
-        fields: 
-        {
-            value: Influx.FieldType.FLOAT,
-        },
-        tags: [ 'deviceid','groupdeviceid','category','unit' ]
-    }]
-
-})
-
 influx.writePoints([
   {
     measurement: measurement,
@@ -125,7 +90,15 @@ influx.writePoints([
     fields: { value: value },
     timestamp: timestampINT,
   }
-],{ precision: 'ms', database: databaselabel } 
+],{ precision: 'ms', retentionPolicy: 'autogen', database: databaselabel, 
+schema: [{
+    measurement: measurement,
+    fields: 
+    {
+        value: Influx.FieldType.FLOAT,
+    },
+    tags: [ 'deviceid','groupdeviceid','category','unit' ]
+}] }
 ).catch(function(err) {
     console.log('Caught an error!', err);
 });

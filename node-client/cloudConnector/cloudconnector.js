@@ -1,12 +1,28 @@
+const WebSocket = require('ws');
+var mqtt = require("mqtt");
+var Client = require('node-rest-client').Client;
 
 var globalcloudconfig;
+var RESTclient;
 
 var CloudConnector = function(cloudconfig)
 {
     globalcloudconfig = cloudconfig;
 
     var localprot = globalcloudconfig.localside.protocol.name;
+
     LocalSideInstance(localprot);
+
+    // Client REST create.
+    RESTclient = new Client(); // lo creo adesso ed una sola volta!
+
+    RESTclient.on('error', function (err) {
+        console.log('something went wrong on REST Request!!', err.request.options);
+    });
+
+    RESTclient.on('responseTimeout', function (res) {
+        console.log("response has expired");
+    });
 
 }
 
@@ -18,6 +34,7 @@ var LocalSideInstance = function (protocolname)
             var host = globalcloudconfig.localside.protocol.host;
             var port = globalcloudconfig.localside.protocol.port;
             WebSocketConnect(host, port);
+
             break;
     }
 }
@@ -25,45 +42,19 @@ var LocalSideInstance = function (protocolname)
 var WebSocketConnect = function(_host, _port,)
 {
 
-    var WebSocketServer = require('ws').Server,
-        wss = new WebSocketServer({port: _port}, {host: _host})
+    const wss = new WebSocket.Server({port: _port}, {host: _host});
 
-        console.log("WS: localside server is on");
+    console.log("WS: localside server is on");
 
-        wss.on('connection', function connection(ws) {
-            ws.isAlive = true;
-            ws.on('pong', heartbeat);
+    wss.on('connection', function connection(ws) {
+        ws.on('message', function incoming(message) {
+            var jsonObject = JSON.parse(message);
 
-            ws.on('message', function incoming(message) 
-            {
-                //create a JSON object
-                var jsonObject = JSON.parse(message);
-                console.log(`Roundtrip time: ${Date.now() - jsonObject.timerequest} ms`);
-
-                // Now Send to Cloud !
-                PublishonCloud(jsonObject);
-            });
-
-            try { ws.send(`${new Date()}`); }
-
-            catch (e) { console.log("Exception, Send Error"); }
+            // Now Send to Cloud !
+            PublishonCloud(jsonObject);
         });
 
-    function noop() {}
-
-    function heartbeat() 
-    {
-        this.isAlive = true;
-    }
-
-    const interval = setInterval(function ping() {
-        wss.clients.forEach(function each(ws) {
-        if (ws.isAlive === false) return ws.terminate();
-        
-        ws.isAlive = false;
-        ws.ping(noop);
-        });
-    }, 30000);
+    });
 
 }
 
@@ -111,8 +102,6 @@ var UbidotsConnectSettings = function(infocloud, datatosend)
         case "MQTT":
         {
 
-            var mqtt = require("mqtt");
-
             var token = infocloud.protocol.token;
             var host = infocloud.protocol.host;
             var qos = infocloud.protocol.qos;
@@ -141,9 +130,6 @@ var UbidotsConnectSettings = function(infocloud, datatosend)
         case "RESTAPI":
         {
 
-        var Client = require('node-rest-client').Client;
-        var client = new Client();
-
         // Info Host / Token
         var token = infocloud.protocol.token; 
         var host = infocloud.protocol.host; 
@@ -169,7 +155,7 @@ var UbidotsConnectSettings = function(infocloud, datatosend)
         //Ubidots JSON Format
         var dataready = { 
             "value" : value,
-            "context" : { "deviceid" : deviceid, "groupdeviceid" : groupdeviceid, "category" : category, "unit": unit},
+            "context" : { "unit": unit, "deviceid" : deviceid, "groupdeviceid" : groupdeviceid, "category" : category},
             "timestamp": timestampInteger,
         }
 
@@ -181,13 +167,11 @@ var UbidotsConnectSettings = function(infocloud, datatosend)
         };
         
         // registering remote methods
-        client.registerMethod("postMethod", request, "POST");
+        RESTclient.registerMethod("postMethod", request, "POST");
         
-        client.methods.postMethod(args, function (data, response) {
-            // parsed response body as js object
+        RESTclient.methods.postMethod(args, function (data, response) {
             console.log(data);
-            // raw response
-            //console.log(response);
+            //console.log(response);             // raw response
         });
 
         console.log("Send PKT to the Cloud");

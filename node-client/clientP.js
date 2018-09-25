@@ -17,7 +17,7 @@ var CheckConfig = function(namefile)
 {
     var _SubModuleConfig = require('./Processing/subModule/configurations/' + namefile);
 
-    switch(_SubModuleConfig.subModuleRef)
+    switch(_SubModuleConfig.taskInfo.subModuleRef)
     {
         case "rul.js":
             console.log("Start Processing Submodule From: " + "rul.js");
@@ -33,5 +33,6 @@ var CheckConfig = function(namefile)
 const fs = require('fs');
 
 fs.readdirSync(FolderTocheck).forEach(file => {
+    console.log(file);
     CheckConfig(file);
 })

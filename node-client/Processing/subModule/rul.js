@@ -8,6 +8,12 @@ getComponentsFromConfig -> Simply gets all the components in the config file
 test -> Tests all the functions, not to be used in production
 */
 
+const Influx = require('influx');
+
+var WebSocket = require('ws');
+var ws;
+var wsSEM = false;
+
 /**
     * Converts the measurements with timestamps in measurements with durations
     * @param {Array} rawMeasurements the raw measurements in the format (torque, speed, timestamp) => (torque, speed, duration) => (torque, cycles)
@@ -159,9 +165,10 @@ test -> Tests all the functions, not to be used in production
   /**
       * Tests all the functions, not to be used in production
       */
-  var test = (config) => {  
+  var testRULCompute = (config, _rawMeasurements) => {  
 
     // The rawMeasurements variable represents the measurements taken from the db
+    //only TEST !
     const rawMeasurements = [
       { torque: 10, torqueUnits: 'Nm', speed: 10, speedUnits: '1/s', timestamp: 0, timestampUnits: "s" },
       { torque: 20, torqueUnits: 'Nm', speed: 0, speedUnits: '1/s', timestamp: 1, timestampUnits: "s" },
@@ -199,15 +206,152 @@ test -> Tests all the functions, not to be used in production
   
     // The RUL of the gearbox is the nominal duration in hours x ( 1 minus the total damage )
     const RUL = config.nominalHoursDuration * (1 - totalDamage);
-    console.log("Gearbox RUL", RUL);
+    console.log("Gearbox RUL: ", RUL);
+
+    // create PKT DATA !!!! To do list !
+
+    var time = require('time');
+
+    var now = new time.Date();
+    now.setTimezone('Europe/Amsterdam');
+
+    var timeDATE = now.toString();
+    var timeINT = Date.parse(timeDATE);
+
+    value = Number(RUL);
+
+    let data = {
+      deviceid: "GearBox01",
+      groupdeviceid: "1",
+      category: "N/A",
+      name: "GearBoxRULProcessing",
+      unit: "h",
+      value: value,
+      timestamp: timeDATE,
+      timestampINT: timeINT 
+  }
+
+    if (wsSEM == true)
+    {
+        try { ws.send(JSON.stringify(data)); console.log("PKT Send on CC !")}
+        catch (e) { console.log("Exception, Send Error, CC maybe die"); }
+    }
+
+ 
   }
   
-  
-  var globalconfig;
 
   var SubModule = function (config) 
   {
-      test(config)
+      console.log("WS Instance")
+      WSInstance(config);
+
+      console.log("Data Gathering...")
+      gatheringDataFromDB(config)
   }
 
-  module.exports = SubModule;
+
+  var gatheringDataFromDB = function (config)
+  {
+
+        var interval = config.taskInfo.taskInterval_min;
+
+        var _host = config.taskInfo.sourceData.DBhost;
+        var _database = config.taskInfo.sourceData.DBname;
+        var _port = config.taskInfo.sourceData.DBport;
+        var _username = config.taskInfo.sourceData.DBuser;
+        var _password = config.taskInfo.sourceData.DBpassword;
+
+        //'SELECT "value" FROM "RawDataDb01"."autogen"."MotorActualSpeed","RawDataDb01"."autogen"."MotorTorque" WHERE time > now() - 30m'
+        var query = config.taskInfo.sourceData.select;
+
+        const influx = new Influx.InfluxDB({
+          host: _host,
+          database: _database,
+          port: _port,
+          username: _username,
+          password: _password,
+      })
+  
+    //settimer/setinterval !! To do list ! 
+    var result = GetCVTFromDB(influx, query, config);
+
+    console.log(result);
+  }
+
+
+
+var WSInstance = function(config)
+{
+
+    var name = config.taskInfo.DestinationData.name;
+    var host = config.taskInfo.DestinationData.info.host;
+    var port = config.taskInfo.DestinationData.info.port;
+
+    var url = 'ws://' + host + ':' + port;
+
+    ws = new WebSocket(url);
+
+    ws.on('open', function open() {
+        wsSEM = true;
+        console.log(name + " WSConnection Opened");
+    });
+
+    ws.on('message', function incoming(data) {
+        console.log(name +' Received: ' + data);
+    });
+
+    ws.on('close', function(code) {
+        console.log(name +' Disconnected: ' + code);
+    });
+
+    ws.on('error', function(error) {
+        console.log(name +' Error: ' + error.code);
+    });
+}
+
+
+  var GetCVTFromDB = function (influx, query, config)
+  {
+
+    influx.query(query).then(results => {
+
+      //console.log(results);
+
+      half = results.length / 2;
+
+      if (half <= 1){
+        return -99;
+      }
+
+      var tabCVT = [{}];
+
+      for (let i=0; i < half; i++)
+      {
+          tabCVT[i] = { 
+            torque: -99, 
+            torqueUnits: 'Nm', 
+            speed: results[i].value, 
+            speedUnits: 'rpm', 
+            timestamp: Date.parse(results[i].time._nanoISO), 
+            timestampUnits: "s" 
+          };
+      }
+
+      for (let i=half; i < (half * 2); i++)
+      {
+          tabCVT[i-half].torque = results[i].value;
+      }
+
+      console.log(tabCVT)
+
+      testRULCompute(config, tabCVT);
+
+      return "RUL compute done!"
+
+    }).catch(error => {
+        console.log(error)
+    })
+  }
+
+module.exports = SubModule;

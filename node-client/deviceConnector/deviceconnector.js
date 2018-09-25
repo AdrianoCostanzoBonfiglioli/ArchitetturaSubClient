@@ -1,10 +1,38 @@
 var globalconfig;
 
+var WebSocket = require('ws');
+
+const fs = require('graceful-fs');
+
+var time = require('time');
+time.tzset('Europe/Amsterdam');
+
+var ws = [];
+var wsSEM = [];
+
 var DeviceConnector = function (config) 
 {
     globalconfig = config; // set new global config
     InstanceSelect(globalconfig.deviceinfo.protocol.name);
+
+    // WS and FILE
+    SendInstanceInit();
 }
+
+var InstanceSelect = function (protocolname) 
+{
+    switch(protocolname) 
+    {
+        case "SOAP":
+            SoapDeviceConnector(globalconfig);
+            break;
+
+        case "MODBUS":
+            ModbusDeviceConnector(globalconfig);
+            break;
+    }
+
+} 
 
 var ModbusDeviceConnector = function(config)
 {
@@ -107,10 +135,7 @@ ACUTaskClientCreate = function(config,client)
                     var unit = parameterInfo.unit;
                     var category = parameterInfo.category;
 
-                    var time = require('time');
-
                     var now = new time.Date();
-                    now.setTimezone('Europe/Amsterdam');
 
                     var timeDATE = now.toString();
                     var timeINT = Date.parse(timeDATE);
@@ -235,7 +260,6 @@ var MatchConfToServiceAndJSON = function (pkt)
         console.log(globalconfig.deviceinfo.deviceid + ": No Match between JSON and SOAP PKT, check correct baseID parameters");
 }
 
-
 var MODBUSCreateJSON = function (Value, TimeDATE, TimeINT, Unit, Category, Name) 
 {
     // formato dati ready to the cloud
@@ -251,7 +275,7 @@ var MODBUSCreateJSON = function (Value, TimeDATE, TimeINT, Unit, Category, Name)
         timestampINT: TimeINT 
     }
     
-    SendJSONData(data);
+    SendJSON(data);
 }
 
 
@@ -290,11 +314,22 @@ var SOAPCreateJSON = function (ParamConfig, Index, Pkt)
 
     console.log("Loop SOAPTaskClient: for parameter: "+ data.name +" this is the resolved value: "+ data.value);
 
-    SendJSONData(data);
+    SendJSON(data);
 }
 
+var SendJSON = function (data) 
+{
+    for (let j=0; j < ws.length; j++)
+    {
+        if (wsSEM[j] == true)
+        {
+            try { ws[j].send(JSON.stringify(data)); }
+            catch (e) { console.log("Exception, Send Error, CC maybe die"); }
+        }
+    }
+}
 
-var SendJSONData = function (data) 
+var SendInstanceInit = function () 
 {
     var InstanceMax = globalconfig.interfacesinfo.length;
 
@@ -307,11 +342,10 @@ var SendJSONData = function (data)
         switch(protocol) 
         {
             case "WS":
-                WSInstance(data, config);
+                WSInstance(i, config);
             break;
 
             case "FILE":
-                FILEInstance(data, config);
             break;
 
             default:
@@ -320,9 +354,8 @@ var SendJSONData = function (data)
     }
 }
 
-var WSInstance = function(data, config)
+var WSInstance = function(i, config)
 {
-    var WebSocket = require('ws');
 
     var name = config.name;
     var host = config.info.host;
@@ -330,26 +363,38 @@ var WSInstance = function(data, config)
 
     var url = 'ws://' + host + ':' + port;
 
-    var ws = new WebSocket(url);
+    function connect() 
+    {
 
-    ws.on('message', function(message) {
-    console.log(name +' Received: ' + message);
-    ws.send(JSON.stringify(data));
-    });
+        ws[i] = new WebSocket(url);
 
-    ws.on('close', function(code) {
-    console.log(name +' Disconnected: ' + code);
-    });
+        ws[i].on('open', function open() {
+            wsSEM[i] = true;
+        });
 
-    ws.on('error', function(error) {
-    console.log(name +' Error: ' + error.code);
-    });
+        ws[i].on('message', function incoming(data) {
+            console.log(name +' Received: ' + data);
+        });
+
+        ws[i].onclose = function(e) {
+            console.log('Socket is closed. Reconnect will be attempted in 1 second.', e.reason);
+            setTimeout(function() {
+            connect();
+            }, 5000);
+        };
+        
+        ws[i].onerror = function(err) {
+            console.error('Socket encountered error: ', err.message, 'Closing socket');
+            ws.close();
+        };
+    }
+
+    connect();
 }
 
+/*
 var FILEInstance = function(data, config)
 {
-    const fs = require('fs');
-
     contentFiltered = {
         name: data.name,
         value: data.value,
@@ -358,30 +403,13 @@ var FILEInstance = function(data, config)
 
     const content = JSON.stringify(contentFiltered);
 
-    fs.appendFileSync(config.info.path, content + "\n", 'utf8', function (err)
-    {
-        if (err) {
-            return console.log(err);
-        }
-        console.log("The file was saved on Disk!");
-    }); 
+    var stream = fs.createWriteStream(config.info.path, {flags:'a'});
+    stream.write(content + "\n");
+    stream.end();
 
+    console.log("Data <" + data.name + "> saved on file: " + config.info.path);
 }
-
-var InstanceSelect = function (protocolname) 
-{
-    switch(protocolname) 
-    {
-        case "SOAP":
-            SoapDeviceConnector(globalconfig);
-            break;
-
-        case "MODBUS":
-            ModbusDeviceConnector(globalconfig);
-            break;
-    }
-
-} 
+*/
 
 
 // TOOLS
