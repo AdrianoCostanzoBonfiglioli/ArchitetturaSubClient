@@ -208,7 +208,12 @@ var wsSEM = false;
     const RUL = config.nominalHoursDuration * (1 - totalDamage);
     console.log("Gearbox RUL: ", RUL);
 
-    // create PKT DATA !!!! To do list !
+    SendRUL(RUL);
+
+  }
+
+  var SendRUL = function (rul) 
+  {
 
     var time = require('time');
 
@@ -218,7 +223,7 @@ var wsSEM = false;
     var timeDATE = now.toString();
     var timeINT = Date.parse(timeDATE);
 
-    value = Number(RUL);
+    value = Number(rul);
 
     let data = {
       deviceid: "GearBox01",
@@ -237,7 +242,6 @@ var wsSEM = false;
         catch (e) { console.log("Exception, Send Error, CC maybe die"); }
     }
 
- 
   }
   
 
@@ -251,10 +255,10 @@ var wsSEM = false;
   }
 
 
-  var gatheringDataFromDB = function (config)
-  {
+var gatheringDataFromDB = function (config)
+{
 
-        var interval = config.taskInfo.taskInterval_min;
+        var interval = config.taskInfo.taskInterval_min * 60 * 1000;
 
         var _host = config.taskInfo.sourceData.DBhost;
         var _database = config.taskInfo.sourceData.DBname;
@@ -271,15 +275,22 @@ var wsSEM = false;
           port: _port,
           username: _username,
           password: _password,
-      })
-  
-    //settimer/setinterval !! To do list ! 
-    var result = GetCVTFromDB(influx, query, config);
+        })
 
-    console.log(result);
-  }
+      console.log("Wait First Task Interval arrives...");
 
-
+      try {
+          setInterval(function() {
+            GetCVTFromDB(influx, query, config);
+          }, interval);
+      } catch(err) {
+        console.log(err);
+        console.log("ERROR Loop RUL compute");
+        //exit from setInterval
+        clearInterval(loopId); // kill to SetInterval
+        }
+   
+}
 
 var WSInstance = function(config)
 {
@@ -290,24 +301,33 @@ var WSInstance = function(config)
 
     var url = 'ws://' + host + ':' + port;
 
-    ws = new WebSocket(url);
+    function connect() 
+    {
 
-    ws.on('open', function open() {
-        wsSEM = true;
-        console.log(name + " WSConnection Opened");
-    });
+        ws = new WebSocket(url);
 
-    ws.on('message', function incoming(data) {
-        console.log(name +' Received: ' + data);
-    });
+        ws.on('open', function open() {
+            wsSEM = true;
+        });
 
-    ws.on('close', function(code) {
-        console.log(name +' Disconnected: ' + code);
-    });
+        ws.on('message', function incoming(data) {
+            console.log(name +' Received: ' + data);
+        });
 
-    ws.on('error', function(error) {
-        console.log(name +' Error: ' + error.code);
-    });
+        ws.onclose = function(e) {
+            console.log('Socket is closed. Reconnect will be attempted in 1 second.', e.reason);
+            setTimeout(function() {
+            connect();
+            }, 5000);
+        };
+        
+        ws.onerror = function(err) {
+            console.error('Socket encountered error: ', err.message, 'Closing socket');
+            ws.close();
+        };
+    }
+
+    connect();
 }
 
 

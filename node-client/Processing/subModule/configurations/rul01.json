@@ -3,7 +3,7 @@
     "taskInfo":
     {
         "subModuleRef":"rul.js",
-        "taskInterval_min": 5,
+        "taskInterval_min": 1,
         "sourceData" :
             {
                 "select": "SELECT \"value\" FROM \"RawDataDb01\".\"autogen\".\"MotorActualSpeed\",\"RawDataDb01\".\"autogen\".\"MotorTorque\" WHERE time > now() - 5m",
