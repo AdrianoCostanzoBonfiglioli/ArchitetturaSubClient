@@ -385,7 +385,7 @@ var WSInstance = function(i, config)
         
         ws[i].onerror = function(err) {
             console.error('Socket encountered error: ', err.message, 'Closing socket');
-            ws.close();
+            ws[i].close();
         };
     }
 
