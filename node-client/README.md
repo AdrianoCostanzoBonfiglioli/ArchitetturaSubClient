@@ -1,5 +1,9 @@
 # Bonfiglioli Subcloud Architecture
 
+## Overview Architectura
+
+![alt text](https://docs.google.com/drawings/d/e/2PACX-1vQ0Qn7BvfTDqJ3c5C8YOYmsHF8IyaQTgqbfN5o2oFOh3zPiyw3fFnF_MbFTMqvixYzSY7pwRMAKjKd3/pub?w=2206&h=1050)
+
 ## DC - Device Connector
 
 Sul prompt dei comandi
@@ -18,6 +22,23 @@ Sul prompt dei comandi
 Description
 
 ![alt text](https://docs.google.com/drawings/d/e/2PACX-1vTwzFbAK49nMjgewkmBBpXerGZ4-Vy8E6dtOK0jV_XSbPof2XLC6sKkFDY4Ae7AEOMJZWERINFhtg2e/pub?w=1266&h=577)
+
+## PM - Processing Module
+
+Sul prompt dei comandi
+> node clientPM.js
+
+Description
+
+
+## PPM - Pre Processing Module
+
+Sul prompt dei comandi
+> node clientPPM.js
+
+Description
+
+
 
 ## Troubleshooting
 
