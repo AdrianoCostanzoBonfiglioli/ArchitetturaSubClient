@@ -1,5 +1,8 @@
 # Bonfiglioli Subcloud Architecture
 
+## IoT Logical Architecture 
+![alt text](https://docs.google.com/drawings/d/e/2PACX-1vTN2aujJgrw6GOVU3hulHqfERzv0Kr2-fDrs9WYDQ0o33X3Lwx92SVronr6l1D4fnBzzVLqk5HMBxys/pub?w=2058&h=1076)
+
 ## Overview Architectura
 
 ![alt text](https://docs.google.com/drawings/d/e/2PACX-1vQ0Qn7BvfTDqJ3c5C8YOYmsHF8IyaQTgqbfN5o2oFOh3zPiyw3fFnF_MbFTMqvixYzSY7pwRMAKjKd3/pub?w=2206&h=1050)
